@@ -123,14 +123,14 @@
                     </li>
 
                     <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i>Users<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-users fa-fw"></i> Users<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="/users">All Users</a>
+                                <a href="/admin/users">All Users</a>
                             </li>
 
                             <li>
-                                <a href="/users/create">Create User</a>
+                                <a href="/admin/users/create">Create User</a>
                             </li>
 
                         </ul>
@@ -138,7 +138,7 @@
                     </li>
 
                     <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i> Posts<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-newspaper-o fa-fw"></i> Posts<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="/posts">All Posts</a>
@@ -183,11 +183,6 @@
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
-
-
-
-
-
 
 
                     <li>
@@ -284,18 +279,12 @@
     </nav>
 
 
-
-
-
     <div class="navbar-default sidebar" role="navigation">
         <div class="sidebar-nav navbar-collapse">
             <ul class="nav" id="side-menu">
                 <li>
                     <a href="/profile"><i class="fa fa-dashboard fa-fw"></i>Profile</a>
                 </li>
-
-
-
 
                 <li>
                     <a href="#"><i class="fa fa-wrench fa-fw"></i> Posts<span class="fa arrow"></span></a>
@@ -312,10 +301,6 @@
                     <!-- /.nav-second-level -->
                 </li>
 
-
-
-
-
             </ul>
 
         </div>
@@ -323,10 +308,6 @@
     </div>
 
 </div>
-
-
-
-
 
 
 <!-- Page Content -->
