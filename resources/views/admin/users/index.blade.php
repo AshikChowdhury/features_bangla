@@ -2,6 +2,22 @@
 
 
 @section('content')
+
+    @if(Session::has('deleted_user'))
+        <div class="alert alert-danger">
+            <h5>{{session('deleted_user')}}</h5>
+        </div>
+    @elseif(Session::has('created_user'))
+        <div class="alert alert-success">
+            <h5>{{session('created_user')}}</h5>
+        </div>
+    @elseif(Session::has('updated_user'))
+        <div class="alert alert-info">
+            <h5>{{session('updated_user')}}</h5>
+        </div>
+    @endif
+
+
     <h2>Users</h2>
 
     <table class="table">

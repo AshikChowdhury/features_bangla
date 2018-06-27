@@ -57,11 +57,11 @@
             <!-- /.dropdown -->
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    <i class="fa fa-user fa-fw"></i> {{Auth::user()->name}} <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                    </li>
+                    {{--<li><a href="#"><i class="fa fa-user fa-fw"></i> {{Auth::user()->name}}</a>--}}
+                    {{--</li>--}}
                     <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                     </li>
                     <li class="divider"></li>
@@ -72,12 +72,7 @@
             </li>
             <!-- /.dropdown -->
 
-
         </ul>
-
-
-
-
 
 
         {{--<ul class="nav navbar-nav navbar-right">--}}
@@ -99,9 +94,6 @@
         {{--</li>--}}
         {{--@endif--}}
         {{--</ul>--}}
-
-
-
 
 
         <div class="navbar-default sidebar" role="navigation">
@@ -141,11 +133,11 @@
                         <a href="#"><i class="fa fa-newspaper-o fa-fw"></i> Posts<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="/posts">All Posts</a>
+                                <a href="{{route('admin.posts.index')}}">All Posts</a>
                             </li>
 
                             <li>
-                                <a href="/posts/create">Create Post</a>
+                                <a href="{{route('admin.posts.create')}}">Create Post</a>
                             </li>
 
                         </ul>
@@ -313,14 +305,12 @@
 <!-- Page Content -->
 <div id="page-wrapper">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header"></h1>
+        {{--<div class="row">--}}
 
-                @yield('content')
-            </div>
-            <!-- /.col-lg-12 -->
-        </div>
+        @yield('content')
+        <!-- /.col-lg-12 -->
+        {{--</div>--}}
+
         <!-- /.row -->
     </div>
     <!-- /.container-fluid -->

@@ -1,7 +1,9 @@
 #admin-page{
     padding-top: 0px;
 }
-
+#ma{
+    margin-right: 100px;
+}
 
 /****************User Profile  *********************/
 .user-row {
@@ -13,9 +15,9 @@
 }
 
 .dropdown-user {
-    margin: 13px 0;
+    margin: 0 0;
     padding: 5px;
-    height: 100%;
+    height: auto;
 }
 
 .dropdown-user:hover {
