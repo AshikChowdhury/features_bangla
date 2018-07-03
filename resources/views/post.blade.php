@@ -32,7 +32,7 @@
     @endif
     <!-- Blog Comments -->
 
-    {{--@if(Auth::check())--}}
+    @if(Auth::check())
 
         <!-- Comments Form -->
         <div class="well">
@@ -52,33 +52,29 @@
             </div>
             {!! Form::close() !!}
 
-
         </div>
 
+    @endif
 
-    {{--@endif--}}
+    <hr>
 
-    {{--<hr>--}}
+    <!-- Posted Comments -->
 
-    {{--<!-- Posted Comments -->--}}
-
-
-
-    {{--@if(count($comments) > 0)--}}
+    @if(count($comments) > 0)
 
 
-        {{--@foreach($comments as $comment)--}}
+        @foreach($comments as $comment)
 
-            {{--<!-- Comment -->--}}
-            {{--<div class="media">--}}
-                {{--<a class="pull-left" href="#">--}}
-                    {{--<img height="64" class="media-object" src="{{Auth::user()->gravatar}}" alt="">--}}
-                {{--</a>--}}
-                {{--<div class="media-body">--}}
-                    {{--<h4 class="media-heading">{{$comment->author}}--}}
-                        {{--<small>{{$comment->created_at->diffForHumans()}}</small>--}}
-                    {{--</h4>--}}
-                    {{--<p>{{$comment->body}}</p>--}}
+            <!-- Comment -->
+            <div class="media">
+                <a class="pull-left" href="#">
+                    <img height="64" class="media-object" src="{{$comment->photo}}" alt="">
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">{{$comment->author}}
+                        <small>{{$comment->created_at->diffForHumans()}}</small>
+                    </h4>
+                    <p>{{$comment->body}}</p>
 
 
 
@@ -152,12 +148,12 @@
                     {{--@endif--}}
 
 
-                {{--</div>--}}
-            {{--</div>--}}
+                </div>
+            </div>
 
-        {{--@endforeach--}}
+        @endforeach
 
-    {{--@endif--}}
+    @endif
 
 
 @stop

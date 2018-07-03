@@ -28,7 +28,9 @@
                 <th>Owner</th>
                 <th>Category</th>
                 <th>Title</th>
-                <th>Body</th>
+                {{--<th>Body</th>--}}
+                <th>Post Link</th>
+                <th>Comments</th>
                 <th>Created</th>
                 <th>Updated</th>
             </tr>
@@ -40,11 +42,13 @@
                     <tr>
                         <td>{{$post->id}}</td>
                         <td><img height="50" width="60" src="{{$post->photo ? $post->photo->file : '/images/400x400.png'}}" alt=""></td>
-                        <td>{{$post->user->name}}</td>
+                        <td style="width: 13%">{{$post->user->name}}</td>
                         <td>{{$post->category ? $post->category->name : "Uncategorized"}}</td>
-                        <td><a href="{{route('admin.posts.edit', $post->id)}}">{{$post->title}}</a></td>
-                        <td>{{str_limit($post->body, 30)}}</td>
+                        <td style="width: 25%"><a href="{{route('admin.posts.edit', $post->id)}}">{{$post->title}}</a></td>
+                        {{--<td>{{str_limit($post->body, 30)}}</td>--}}
+                        <td><a href="{{route('home.post',$post->id)}}">View Post</a></td>
                         {{--<td><button class="btn-success btn-xs">{{$user->is_active == 1 ? 'Active' : 'Inactive' }}</button></td>--}}
+                        <td><a href="{{route('admin.comments.show',$post->id)}}">View Comments</a></td>
                         <td>{{$post->created_at->diffForHumans()}}</td>
                         <td>{{$post->updated_at->diffForHumans()}}</td>
                     </tr>
