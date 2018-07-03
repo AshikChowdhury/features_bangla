@@ -12,9 +12,12 @@
     <title>Blog Post - Start Bootstrap Template</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="{{asset('css/app.css')}}" rel="stylesheet">
-
-    <link href="{{asset('css/libs.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/blog-post.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/font-awesome.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/metisMenu.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/sb-admin-2.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/styles.css')}}" >
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -38,16 +41,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Start Bootstrap</a>
+            <a class="navbar-brand" href="#">Jonogoner Blog</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>
                     <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
                 </li>
                 <li>
                     <a href="#">Contact</a>
@@ -65,23 +65,15 @@
     <div class="row">
 
         <!-- Blog Post Content Column -->
-        <div class="col-lg-8">
+        <div class="col-lg-9">
 
             @yield('content')
-
-
-
 
         </div>
 
 
-
-
-
-
-
         <!-- Blog Sidebar Widgets Column -->
-        <div class="col-md-4">
+        <div class="col-md-3">
 
             <!-- Blog Search Well -->
             <div class="well">
@@ -101,27 +93,27 @@
             <div class="well">
                 <h4>Blog Categories</h4>
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <ul class="list-unstyled">
-                            <li><a href="#">Category Name</a>
+                            <li><a href="#">Category</a>
                             </li>
-                            <li><a href="#">Category Name</a>
+                            <li><a href="#">Category </a>
                             </li>
-                            <li><a href="#">Category Name</a>
+                            <li><a href="#">Category </a>
                             </li>
-                            <li><a href="#">Category Name</a>
+                            <li><a href="#">Category </a>
                             </li>
                         </ul>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <ul class="list-unstyled">
-                            <li><a href="#">Category Name</a>
+                            <li><a href="#">Category </a>
                             </li>
-                            <li><a href="#">Category Name</a>
+                            <li><a href="#">Category </a>
                             </li>
-                            <li><a href="#">Category Name</a>
+                            <li><a href="#">Category </a>
                             </li>
-                            <li><a href="#">Category Name</a>
+                            <li><a href="#">Category </a>
                             </li>
                         </ul>
                     </div>
@@ -146,7 +138,7 @@
     <footer>
         <div class="row">
             <div class="col-lg-12">
-                <p>Copyright &copy; Your Website 2014</p>
+                <p>Copyright &copy; Ashik Chowdhury 2018</p>
             </div>
         </div>
         <!-- /.row -->
@@ -157,12 +149,13 @@
 
 <!-- jQuery -->
 
-<script src="{{asset('js/libs.js')}}"></script>
-
+<script src="{{asset('js/jquery.js')}}"></script>
+<script src="{{asset('js/bootstrap.js')}}"></script>
+<script src="{{asset('js/metisMenu.js')}}"></script>
+<script src="{{asset('js/sb-admin-2.js')}}"></script>
+<script src="{{asset('js/scripts.js')}}"></script>
 
 @yield('scripts')
-
-
 
 
 
