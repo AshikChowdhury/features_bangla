@@ -131,7 +131,7 @@ class AdminPostsController extends Controller
     {
         $post = Post::findOrFail($id);
 
-        if ($post->photo_id){
+        if ($post->photo_id != null){
             unlink(public_path().$post->photo->file);
         }
 

@@ -1,36 +1,38 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="row" style="padding-top: 50px">
 
-        <div class="col-sm-3">
+    @include('includes.tinyeditor')
 
-            <img src="{{$post->photo ? $post->photo->file : '/images/400x400.png'}}" alt="" class="img-responsive img-rounded">
+    <div class="row" style="padding-top: 50px; padding-bottom: 100px">
 
-        </div>
+        <div class="col-sm-12">
+            <div class="col-sm-8">
+                <h2>Edit Post</h2>
 
-        <div class="col-sm-9">
+                <img src="{{$post->photo ? $post->photo->file : $post->photoPlaceHolder()}}" alt="" class="img-responsive img-rounded">
+
+            </div>
 
             @include('includes.form_error')
 
-            <h2>Edit Post</h2>
             {!! Form::model($post, ['method'=>'PATCH', 'action'=>['AdminPostsController@update', $post->id],'files'=>true]) !!}
-            <div class="form-group">
+            <div class="form-group col-sm-12">
                 {!! Form::label('title', 'Title') !!}
                 {!! Form::text('title', null, ['class'=>'form-control']) !!}
             </div>
 
-            <div class="form-group">
+            <div class="form-group col-sm-3" style="margin-right: 100%">
                 {!! Form::label('category_id', 'Category') !!}
                 {!! Form::select('category_id', ['' => 'Choose Categories'] + $categories, null, ['class'=>'form-control']) !!}
             </div>
 
-            <div class="form-group">
+            <div class="form-group col-sm-4">
                 {!! Form::label('photo_id', 'Post Photo') !!}
                 {!! Form::file('photo_id', null, ['class'=>'form-control']) !!}
             </div>
 
-            <div class="form-group">
+            <div class="form-group col-sm-12">
                 {!! Form::label('body', 'Body') !!}
                 {!! Form::textarea('body', null, ['class'=>'form-control']) !!}
             </div>
