@@ -143,6 +143,7 @@ class AdminPostsController extends Controller
     }
 
 
+
     public function post($slug){
 
         $post = Post::where('slug',$slug)->first();

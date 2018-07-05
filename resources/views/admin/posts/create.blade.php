@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+    @include('includes.tinyeditor')
     <div class="col-md-8 col-md-offset-1">
         <h2>Create Post</h2>
         {!! Form::open(['method'=>'POST', 'action'=>'AdminPostsController@store','files'=>true]) !!}
