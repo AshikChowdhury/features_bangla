@@ -49,11 +49,7 @@
         </div>
         <!-- /.navbar-header -->
 
-
-
         <ul class="nav navbar-top-links navbar-right">
-
-
             <!-- /.dropdown -->
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">

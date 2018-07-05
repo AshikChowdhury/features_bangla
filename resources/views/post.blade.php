@@ -62,13 +62,11 @@
 
     @if(count($comments) > 0)
 
-
         @foreach($comments as $comment)
-
             <!-- Comment -->
             <div class="media">
                 <a class="pull-left" href="#">
-                    <img height="64" class="media-object" src="{{$comment->photo}}" alt="">
+                    <img height="64" class="media-object" src="{{Auth::user()->gravatar}}" alt="">
                 </a>
                 <div class="media-body">
                     <h4 class="media-heading">{{$comment->author}}
@@ -76,77 +74,59 @@
                     </h4>
                     <p>{{$comment->body}}</p>
 
+                @if(count($comment->replies) > 0)
 
+                    @foreach($comment->replies as $reply)
 
-                {{--@if(count($comment->replies) > 0)--}}
+                        @if($reply->is_active == 1)
 
+                            <!-- Nested Comment -->
+                                <div id="nested-comment" class=" media">
+                                    <a class="pull-left" href="#">
+                                        <img height="64" class="media-object" src="{{$reply->photo}}" alt="">
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">{{$reply->author}}
+                                            <small>{{$reply->created_at->diffForHumans()}}</small>
+                                        </h4>
+                                        <p>{{$reply->body}}</p>
+                                    </div>
 
-                    {{--@foreach($comment->replies as $reply)--}}
+                                    <div class="comment-reply-container">
+                                        <button class="toggle-reply btn-xs btn-primary ">Reply</button>
 
+                                        <div class="comment-reply col-sm-8">
 
-                        {{--@if($reply->is_active == 1)--}}
+                                            {!! Form::open(['method'=>'POST', 'action'=> 'CommentsRepliesController@createReply']) !!}
+                                            <div class="form-group">
 
+                                                <input type="hidden" name="comment_id" value="{{$comment->id}}">
 
+                                                {!! Form::label('body', 'Reply Comment') !!}
+                                                {!! Form::textarea('body', null, ['class'=>'form-control','rows'=>1])!!}
+                                            </div>
 
-                            {{--<!-- Nested Comment -->--}}
-                                {{--<div id="nested-comment" class=" media">--}}
-                                    {{--<a class="pull-left" href="#">--}}
-                                        {{--<img height="64" class="media-object" src="{{$reply->photo}}" alt="">--}}
-                                    {{--</a>--}}
-                                    {{--<div class="media-body">--}}
-                                        {{--<h4 class="media-heading"{{$reply->author}}--}}
-                                        {{--<small>{{$reply->created_at->diffForHumans()}}</small>--}}
-                                        {{--</h4>--}}
-                                        {{--<p>{{$reply->body}}</p>--}}
-                                    {{--</div>--}}
+                                            <div class="form-group">
+                                                {!! Form::submit('Reply', ['class'=>'btn-xs btn-primary']) !!}
+                                            </div>
+                                            {!! Form::close() !!}
 
+                                        </div>
 
-                                    {{--<div class="comment-reply-container">--}}
+                                    </div>
+                                    <!-- End Nested Comment -->
 
+                                </div>
 
-                                        {{--<button class="toggle-reply btn btn-primary pull-right">Reply</button>--}}
+                                @else
 
+                                {{--<h2 class="text-center">No Replies</h2>--}}
 
-                                        {{--<div class="comment-reply col-sm-6">--}}
+                            @endif
 
+                        @endforeach
 
-                                            {{--{!! Form::open(['method'=>'POST', 'action'=> 'CommentRepliesController@createReply']) !!}--}}
-                                            {{--<div class="form-group">--}}
-
-                                                {{--<input type="hidden" name="comment_id" value="{{$comment->id}}">--}}
-
-                                                {{--{!! Form::label('body', 'Body:') !!}--}}
-                                                {{--{!! Form::textarea('body', null, ['class'=>'form-control','rows'=>1])!!}--}}
-                                            {{--</div>--}}
-
-                                            {{--<div class="form-group">--}}
-                                                {{--{!! Form::submit('submit', ['class'=>'btn btn-primary']) !!}--}}
-                                            {{--</div>--}}
-                                            {{--{!! Form::close() !!}--}}
-
-
-                                        {{--</div>--}}
-
-                                    {{--</div>--}}
-                                    {{--<!-- End Nested Comment -->--}}
-
-
-                                {{--</div>--}}
-
-                            {{--@else--}}
-
-
-                                {{--<h1 class="text-center">No Replies</h1>--}}
-
-
-
-
-                            {{--@endif--}}
-
-                        {{--@endforeach--}}
-
-                    {{--@endif--}}
-
+                    @endif
 
                 </div>
             </div>
@@ -155,5 +135,13 @@
 
     @endif
 
+@stop
+
+@section('scripts')
+    <script>
+        $(".comment-reply-container .toggle-reply").click(function(){
+            $(this).next(".comment-reply").slideToggle("slow");
+        });
+    </script>
 
 @stop

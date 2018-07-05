@@ -12,7 +12,7 @@
         </div>
 
         <div class="form-group">
-            {!! Form::submit('Create Category', ['class'=>'btn btn-primary col-sm-4']) !!}
+            {!! Form::submit('Update Category', ['class'=>'btn btn-primary col-sm-4']) !!}
         </div>
         {!! Form::close() !!}
 

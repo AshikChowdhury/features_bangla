@@ -19,7 +19,7 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/post/{id}', ['as'=>'home.post', 'uses'=>'AdminPostsController@post']);
+Route::get('/post/{slug}', ['as'=>'home.post', 'uses'=>'AdminPostsController@post']);
 
 Route::group(['middleware'=>'admin'],function (){
 
@@ -37,8 +37,12 @@ Route::group(['middleware'=>'admin'],function (){
 
     Route::resource('admin/comments', 'PostCommentsController');
 
-    Route::resource('admin/comments/replies', 'CommentsRepliesController');
+    Route::resource('admin/comment/replies', 'CommentsRepliesController');
 
+});
+
+Route::group(['middleware'=>'auth'],function (){
+    Route::post('comment/reply', 'CommentsRepliesController@createReply');
 });
 
 
