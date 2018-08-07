@@ -14,8 +14,22 @@
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
+        'role_id' => $faker->numberBetween(2,3),
+        'is_active' => $faker->numberBetween(0,1),
         'email' => $faker->safeEmail,
         'password' => bcrypt(str_random(10)),
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Post::class, function (Faker\Generator $faker) {
+    return [
+        'category_id' => $faker->numberBetween(1,10),
+        'photo_id' => 1,
+        'title' => $faker->sentence(7,11),
+        'body' => $faker->paragraphs(rand(10,15),true),
+        'slug' => $faker->slug().time(),
+    ];
+});
+
+

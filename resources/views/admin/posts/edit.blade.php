@@ -5,6 +5,7 @@
     @include('includes.tinyeditor')
 
     <div class="row" style="padding-top: 50px; padding-bottom: 100px">
+        @include('includes.form_error')
 
         <div class="col-sm-12">
             <div class="col-sm-8">
@@ -14,7 +15,7 @@
 
             </div>
 
-            @include('includes.form_error')
+
 
             {!! Form::model($post, ['method'=>'PATCH', 'action'=>['AdminPostsController@update', $post->id],'files'=>true]) !!}
             <div class="form-group col-sm-12">

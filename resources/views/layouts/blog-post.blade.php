@@ -1,162 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="bn">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.html">
+    <!-- Author Meta -->
+    <meta name="author" content="colorlib">
+    <!-- Meta Description -->
     <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Blog Post - Start Bootstrap Template</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="{{ asset('css/blog-post.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/font-awesome.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/metisMenu.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/sb-admin-2.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/styles.css')}}" >
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>CopyPasteBd</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <!--
+    CSS
+    ============================================= -->
+    <link rel="stylesheet" href="/css/main/linearicons.css">
+    <link rel="stylesheet" href="/css/main/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/main/bootstrap.css">
+    <link rel="stylesheet" href="/css/main/magnific-popup.css">
+    <link rel="stylesheet" href="/css/main/nice-select.css">
+    <link rel="stylesheet" href="/css/main/animate.min.css">
+    <link rel="stylesheet" href="/css/main/owl.carousel.css">
+    <link rel="stylesheet" href="/css/main/jquery-ui.css">
+    <link rel="stylesheet" href="/css/main/main.css">
 </head>
 
 <body>
+<header>
 
-<!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    {{--<div class="header-top">--}}
+        {{--<div class="container">--}}
+            {{--<div class="row">--}}
+                {{--<div class="col-lg-6 col-md-6 col-sm-6 col-6 header-top-left no-padding">--}}
+                    {{--<ul>--}}
+                        {{--<li><a href="#"><i class="fa fa-facebook"></i></a></li>--}}
+                        {{--<li><a href="#"><i class="fa fa-twitter"></i></a></li>--}}
+                        {{--<li><a href="#"><i class="fa fa-dribbble"></i></a></li>--}}
+                    {{--</ul>--}}
+                {{--</div>--}}
+                {{--<div class="col-lg-6 col-md-6 col-sm-6 col-6 header-top-right no-padding">--}}
+                    {{--<ul>--}}
+                        {{--<li><a href="tel:+440 012 3654 896"><span class="lnr lnr-phone-handset"></span><span>+440 012 3654 896</span></a></li>--}}
+                        {{--<li><a href="https://colorlib.com/cdn-cgi/l/email-protection#2f5c5a5f5f405d5b6f4c4043405d43464d014c4042"><span class="lnr lnr-envelope"></span><span><span class="__cf_email__" data-cfemail="fd8e888d8d928f89bd9e9291928f91949fd39e9290">[email&#160;protected]</span></span></a></li>--}}
+                    {{--</ul>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
+    <div class="logo-wrap">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-4 col-md-4 col-sm-12 logo-left no-padding">
+                    <a href="index-2.html">
+                        <img class="img-fluid" src="/images/logo.png" alt="">
+                    </a>
+                </div>
+                {{--<div class="col-lg-8 col-md-8 col-sm-12 logo-right no-padding ads-banner">--}}
+                <div class="col-lg-8 col-md-8 col-sm-12 logo-right no-padding ads-banner">
+                    <img class="img-fluid" src="/images/banner.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container main-menu" id="main-menu">
+        <div class="row align-items-center justify-content-between">
+            <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                    <li class="menu-active"><a href="index-2.html">Home</a></li>
+                    <li><a href="archive.html">Archive</a></li>
+                    <li><a href="category.html">Category</a></li>
+                    <li class="menu-has-children"><a href="#">Post Types</a>
+                        <ul>
+                            <li><a href="standard-post.html">Standard Post</a></li>
+                            <li><a href="image-post.html">Image Post</a></li>
+                            <li><a href="gallery-post.html">Gallery Post</a></li>
+                            <li><a href="video-post.html">Video Post</a></li>
+                            <li><a href="audio-post.html">Audio Post</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav><!-- #nav-menu-container -->
+            <div class="navbar-right">
+                <form class="Search">
+                    <input type="text" class="form-control Search-box" name="Search-box" id="Search-box" placeholder="Search">
+                    <label for="Search-box" class="Search-box-label">
+                        <span class="lnr lnr-magnifier"></span>
+                    </label>
+                    <span class="Search-close">
+								<span class="lnr lnr-cross"></span>
+							</span>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+ @yield('content')
+
+<footer class="footer-area section-gap">
     <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Jonogoner Blog</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
-
-<!-- Page Content -->
-<div class="container">
-
-    <div class="row">
-
-        <!-- Blog Post Content Column -->
-        <div class="col-lg-9">
-
-            @yield('content')
-
-        </div>
-
-
-        <!-- Blog Sidebar Widgets Column -->
-        <div class="col-md-3">
-
-            <!-- Blog Search Well -->
-            <div class="well">
-                <h4>Blog Search</h4>
-                <div class="input-group">
-                    <input type="text" class="form-control">
-                    <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                            </button>
-                        </span>
-                </div>
-                <!-- /.input-group -->
-            </div>
-
-            <!-- Blog Categories Well -->
-            <div class="well">
-                <h4>Blog Categories</h4>
-                <div class="row">
-                    <div class="col-md-6">
-                        <ul class="list-unstyled">
-                            <li><a href="#">Category</a>
-                            </li>
-                            <li><a href="#">Category </a>
-                            </li>
-                            <li><a href="#">Category </a>
-                            </li>
-                            <li><a href="#">Category </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <ul class="list-unstyled">
-                            <li><a href="#">Category </a>
-                            </li>
-                            <li><a href="#">Category </a>
-                            </li>
-                            <li><a href="#">Category </a>
-                            </li>
-                            <li><a href="#">Category </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /.row -->
-            </div>
-
-            <!-- Side Widget Well -->
-            <div class="well">
-                <h4>Side Widget Well</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
-            </div>
-
-        </div>
-
-    </div>
-    <!-- /.row -->
-
-    <hr>
-
-    <!-- Footer -->
-    <footer>
         <div class="row">
-            <div class="col-lg-12">
-                <p>Copyright &copy; Ashik Chowdhury 2018</p>
+            <div class="col-lg-3 col-md-6 single-footer-widget">
+                <h4>Top Products</h4>
+                <ul>
+                    <li><a href="#">Managed Website</a></li>
+                    <li><a href="#">Manage Reputation</a></li>
+                    <li><a href="#">Power Tools</a></li>
+                    <li><a href="#">Marketing Service</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-6 single-footer-widget">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Brand Assets</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-6 single-footer-widget">
+                <h4>Features</h4>
+                <ul>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Brand Assets</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-6 single-footer-widget">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Guides</a></li>
+                    <li><a href="#">Research</a></li>
+                    <li><a href="#">Experts</a></li>
+                    <li><a href="#">Agencies</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 single-footer-widget">
+                <h4>Instragram Feed</h4>
+                <ul class="instafeed d-flex flex-wrap">
+                    <li><img src="img/i1.jpg" alt=""></li>
+                    <li><img src="img/i2.jpg" alt=""></li>
+                    <li><img src="img/i3.jpg" alt=""></li>
+                    <li><img src="img/i4.jpg" alt=""></li>
+                    <li><img src="img/i5.jpg" alt=""></li>
+                    <li><img src="img/i6.jpg" alt=""></li>
+                    <li><img src="img/i7.jpg" alt=""></li>
+                    <li><img src="img/i8.jpg" alt=""></li>
+                </ul>
             </div>
         </div>
-        <!-- /.row -->
-    </footer>
+        <div class="footer-bottom row align-items-center">
+            <p class="footer-text m-0 col-lg-8 col-md-12">
+                Copyright &copy; CopyPasteBD All rights reserved
+             </p>
+            <div class="col-lg-4 col-md-12 footer-social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+                <a href="#"><i class="fa fa-behance"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End footer Area -->
+<script src="/js/main/vendor/jquery-2.2.4.min.js"></script>
+<script src="../../../../cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="/js/main/vendor/bootstrap.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+<script src="/js/main/easing.min.js"></script>
+<script src="/js/main/hoverIntent.js"></script>
+<script src="/js/main/superfish.min.js"></script>
+<script src="/js/main/jquery.ajaxchimp.min.js"></script>
+<script src="/js/main/jquery.magnific-popup.min.js"></script>
+<script src="/js/main/mn-accordion.js"></script>
+<script src="/js/main/jquery-ui.js"></script>
+<script src="/js/main/jquery.nice-select.min.js"></script>
+<script src="/js/main/owl.carousel.min.js"></script>
+<script src="/js/main/mail-script.js"></script>
+<script src="/js/main/main.js"></script>
 
-</div>
-<!-- /.container -->
-
-<!-- jQuery -->
-
-<script src="{{asset('js/jquery.js')}}"></script>
-<script src="{{asset('js/bootstrap.js')}}"></script>
-<script src="{{asset('js/metisMenu.js')}}"></script>
-<script src="{{asset('js/sb-admin-2.js')}}"></script>
-<script src="{{asset('js/scripts.js')}}"></script>
 
 @yield('scripts')
-
 
 
 </body>

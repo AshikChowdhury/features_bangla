@@ -12,22 +12,15 @@
     <title>Admin</title>
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="{{ asset('css/blog-post.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/font-awesome.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/metisMenu.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/sb-admin-2.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/styles.css')}}" >
+    {{--<link rel="stylesheet" href="{{ asset('css/blog-post.css')}}">--}}
+    {{--<link rel="stylesheet" href="{{ asset('css/bootstrap.css')}}">--}}
+    {{--<link rel="stylesheet" href="{{ asset('css/font-awesome.css')}}">--}}
+    {{--<link rel="stylesheet" href="{{ asset('css/metisMenu.css')}}">--}}
+    {{--<link rel="stylesheet" href="{{ asset('css/sb-admin-2.css')}}">--}}
+    {{--<link rel="stylesheet" href="{{ asset('css/styles.css')}}" >--}}
+    <link rel="stylesheet" href="{{ mix('css/libs.css')}}" >
 
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
     @yield('style')
-
 
 
 </head>
@@ -69,7 +62,6 @@
             <!-- /.dropdown -->
 
         </ul>
-
 
         {{--<ul class="nav navbar-nav navbar-right">--}}
         {{--@if(auth()->guest())--}}
@@ -304,13 +296,13 @@
 <!-- Page Content -->
 <div id="page-wrapper">
     <div class="container-fluid">
-        {{--<div class="row">--}}
+    {{--<div class="row">--}}
 
-        @yield('content')
-        <!-- /.col-lg-12 -->
-        {{--</div>--}}
+    @yield('content')
+    <!-- /.col-lg-12 -->
+    {{--</div>--}}
 
-        <!-- /.row -->
+    <!-- /.row -->
     </div>
     <!-- /.container-fluid -->
 </div>
@@ -320,11 +312,13 @@
 <!-- /#wrapper -->
 
 <!-- jQuery -->
-<script src="{{asset('js/jquery.js')}}"></script>
-<script src="{{asset('js/bootstrap.js')}}"></script>
-<script src="{{asset('js/metisMenu.js')}}"></script>
-<script src="{{asset('js/sb-admin-2.js')}}"></script>
-<script src="{{asset('js/scripts.js')}}"></script>
+{{--<script src="{{asset('js/jquery.js')}}"></script>--}}
+{{--<script src="{{asset('js/bootstrap.js')}}"></script>--}}
+{{--<script src="{{asset('js/metisMenu.js')}}"></script>--}}
+{{--<script src="{{asset('js/sb-admin-2.js')}}"></script>--}}
+{{--<script src="{{asset('js/scripts.js')}}"></script>--}}
+{{--<script src="{{mix('js/app.js')}}"></script>--}}
+<script src="{{mix('js/libs.js')}}"></script>
 
 @yield('script')
 

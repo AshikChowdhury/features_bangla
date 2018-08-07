@@ -114,9 +114,10 @@ class AdminPostsController extends Controller
 
             $input['photo_id'] = $photo->id;
         }
-        Auth::user()->posts()->whereId($id)->first()->update($input);
+//        Auth::user()->posts()->whereId($id)->first()->update($input);
+        Post::whereId($id)->first()->update($input);
 
-        Session::flash('updated_post','Post Has Been Successfully Updated');
+        Session::flash('updated_post','Post has been successfully updated');
 
         return redirect('/admin/posts');
     }
@@ -148,8 +149,14 @@ class AdminPostsController extends Controller
 
         $post = Post::where('slug',$slug)->first();
 
-        $comments = $post->comments()->whereIsActive(1)->get();
+//        dd($post);
 
-        return view('post', compact('post','comments'));
+        $next = Post::where('id', '>', $post->id)->orderBy('id')->first();
+
+        $previous = Post::where('id', '<', $post->id)->orderBy('id')->first();
+
+//        $comments = $post->comments()->whereIsActive(1)->get();
+
+        return view('post', compact('post', 'next', 'previous'));
     }
 }

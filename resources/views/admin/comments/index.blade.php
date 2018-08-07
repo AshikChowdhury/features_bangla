@@ -16,7 +16,7 @@
                     <th>Body</th>
                     <th>Post</th>
                     <th>Replies</th>
-                    <th colspan="2" class="text-center">Action</th>
+                    <th colspan="2" class="center">Action</th>
                 </tr>
                 </thead>
                 <tbody>

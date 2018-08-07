@@ -46,13 +46,18 @@
                         <td>{{$user->email}}</td>
                         <td>{{ucfirst($user->role->name ? $user->role->name : 'User Has No Role')}}</td>
                         <td><button class="btn-success btn-xs">{{$user->is_active == 1 ? 'Active' : 'Inactive' }}</button></td>
-                        <td>{{$user->created_at->diffForHumans()}}</td>
+                        <td>{{$user->created_at->format('d F, Y')}}</td>
                         <td>{{$user->updated_at->diffForHumans()}}</td>
                     </tr>
                 @endforeach
             @endif
             </tbody>
         </table>
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-5">
+                    {{$users->render()}}
+                </div>
+            </div>
     </div>
 
 @stop

@@ -2,8 +2,14 @@
 
 @section('content')
 
-    @include('includes.tinyeditor')
     <div class="col-md-12">
+        @include('includes.form_error')
+    </div>
+
+    @include('includes.tinyeditor')
+
+    <div class="col-md-12">
+
         <h2>Create Post</h2>
         {!! Form::open(['method'=>'POST', 'action'=>'AdminPostsController@store','files'=>true]) !!}
         <div class="form-group col-md-10">
@@ -31,10 +37,8 @@
         </div>
         {!! Form::close() !!}
 
-        @include('includes.form_error')
+
     </div>
-
-
 
 
 @stop
