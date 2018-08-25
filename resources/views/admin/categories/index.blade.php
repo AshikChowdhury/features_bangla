@@ -4,7 +4,7 @@
 
     <div class="row" style="padding-top: 20px">
         <h2>Categories</h2>
-        <div class="col-sm-6">
+        <div class="col-sm-4">
             {!! Form::open(['method'=>'POST', 'action'=>'AdminCategoriesController@store']) !!}
             <div class="form-group">
                 {!! Form::label('name', 'Name') !!}
@@ -18,7 +18,7 @@
 
             @include('includes.form_error')
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-8">
 
         @if(Session::has('category_created'))
             <div class="alert alert-success">
@@ -34,9 +34,7 @@
             </div>
         @endif
 
-
-
-        <table class="table">
+        <table width="100%" class="table table-striped table-bordered table-hover" id="userTable">
             <thead>
             <tr>
                 <th>ID</th>

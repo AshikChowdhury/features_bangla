@@ -11,17 +11,7 @@
 
     <title>Admin</title>
 
-    <!-- Bootstrap Core CSS -->
-    {{--<link rel="stylesheet" href="{{ asset('css/blog-post.css')}}">--}}
-    {{--<link rel="stylesheet" href="{{ asset('css/bootstrap.css')}}">--}}
-    {{--<link rel="stylesheet" href="{{ asset('css/font-awesome.css')}}">--}}
-    {{--<link rel="stylesheet" href="{{ asset('css/metisMenu.css')}}">--}}
-    {{--<link rel="stylesheet" href="{{ asset('css/sb-admin-2.css')}}">--}}
-    {{--<link rel="stylesheet" href="{{ asset('css/styles.css')}}" >--}}
     <link rel="stylesheet" href="{{ mix('css/libs.css')}}" >
-
-    @yield('style')
-
 
 </head>
 
@@ -49,8 +39,6 @@
                     <i class="fa fa-user fa-fw"></i> {{Auth::user()->name}} <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-                    {{--<li><a href="#"><i class="fa fa-user fa-fw"></i> {{Auth::user()->name}}</a>--}}
-                    {{--</li>--}}
                     <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                     </li>
                     <li class="divider"></li>
@@ -308,16 +296,7 @@
 </div>
 <!-- /#page-wrapper -->
 
-</div>
 <!-- /#wrapper -->
-
-<!-- jQuery -->
-{{--<script src="{{asset('js/jquery.js')}}"></script>--}}
-{{--<script src="{{asset('js/bootstrap.js')}}"></script>--}}
-{{--<script src="{{asset('js/metisMenu.js')}}"></script>--}}
-{{--<script src="{{asset('js/sb-admin-2.js')}}"></script>--}}
-{{--<script src="{{asset('js/scripts.js')}}"></script>--}}
-{{--<script src="{{mix('js/app.js')}}"></script>--}}
 <script src="{{mix('js/libs.js')}}"></script>
 
 @yield('script')
