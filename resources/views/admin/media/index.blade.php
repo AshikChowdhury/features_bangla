@@ -30,7 +30,7 @@
                     <input type="submit" name="delete_all" class="btn btn-primary">
                 </div>
 
-                <table class="table">
+                <table width="100%" class="table table-striped table-bordered table-hover" id="userTable">
                     <thead>
                     <tr>
                         <th width="5%"><input type="checkbox" id="options"> All</th>
