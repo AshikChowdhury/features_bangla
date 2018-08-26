@@ -20,7 +20,7 @@
                     </div>
                 @endif
                 <div class="col-lg-4">
-                    <strong><h4>Users</h4></strong>
+                    <strong><h3>Users</h3></strong>
                 </div>
                 <div class="col-lg-8">
                     <div class="panel-heading pull-right">
@@ -33,7 +33,7 @@
                         <table width="100%" class="table table-striped table-bordered table-hover" id="userTable">
                             <thead>
                             <tr>
-                                <th>ID</th>
+                                <th style="width: 1%">ID</th>
                                 <th>Photo</th>
                                 <th>Name</th>
                                 <th>Email</th>
