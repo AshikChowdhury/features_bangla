@@ -7,7 +7,7 @@
     <!-- Favicon-->
     <link rel="shortcut icon" href="img/fav.html">
     <!-- Author Meta -->
-    <meta name="author" content="colorlib">
+    <meta name="author" content="Ashik">
     <!-- Meta Description -->
     <meta name="description" content="">
     <!-- Meta Keyword -->

@@ -1,29 +1,34 @@
 @extends('layouts.admin')
 
 @section('content')
+    <div class="row" style="padding-top: 20px">
+        <div class="col-md-10 col-md-offset-1 col-sm-10 col-md-offset-1">
+            <div class="col-md-12 col-sm-10">
+                <strong><h3>Edit Category</h3></strong>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    {!! Form::model($category,['method'=>'PATCH', 'action'=>['AdminCategoriesController@update',$category->id]]) !!}
+                    <div class="form-group">
+                        {!! Form::label('name', 'Name') !!}
+                        {!! Form::text('name', null, ['class'=>'form-control']) !!}
+                    </div>
 
+                    <div class="form-group">
+                        {!! Form::submit('Update Category', ['class'=>'btn btn-primary col-sm-3']) !!}
+                    </div>
+                    {!! Form::close() !!}
 
-    <div class="col-sm-10 col-sm-offset-1">
-        <h2>Edit Category</h2><br>
-        {!! Form::model($category,['method'=>'PATCH', 'action'=>['AdminCategoriesController@update',$category->id]]) !!}
-        <div class="form-group">
-            {!! Form::label('name', 'Name') !!}
-            {!! Form::text('name', null, ['class'=>'form-control']) !!}
+                    {!! Form::open(['method'=>'DELETE', 'action'=>['AdminCategoriesController@destroy', $category->id]]) !!}
+                    <div class="form-group">
+                        {!! Form::submit('Delete Category', ['class'=>'btn btn-danger col-sm-2 col-sm-offset-1']) !!}
+                    </div>
+                    {!! Form::close() !!}
+                </div>
+            </div>
         </div>
-
-        <div class="form-group">
-            {!! Form::submit('Update Category', ['class'=>'btn btn-primary col-sm-4']) !!}
-        </div>
-        {!! Form::close() !!}
-
-        {!! Form::open(['method'=>'DELETE', 'action'=>['AdminCategoriesController@destroy', $category->id]]) !!}
-        <div class="form-group">
-            {!! Form::submit('Delete Category', ['class'=>'btn btn-danger col-sm-2 col-sm-offset-1']) !!}
-        </div>
-        {!! Form::close() !!}
 
         @include('includes.form_error')
     </div>
-
 
 @stop

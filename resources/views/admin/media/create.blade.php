@@ -7,12 +7,23 @@
 @section('content')
 
     <div class="row">
-        <h2>Upload Media</h2>
-        {!! Form::open(['method'=>'POST', 'action'=>'AdminMediasController@store', 'class'=>'dropzone']) !!}
+        <div class="col-lg-4">
+            <strong><h3>Upload Media</h3></strong>
+        </div>
+        <div class="col-lg-8">
+            <div class="panel-heading pull-right">
+                <a href="{{route('admin.media.create')}}" class="btn-primary btn-sm"><i class="fa fa-navicon"></i> All Media</a>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    {!! Form::open(['method'=>'POST', 'action'=>'AdminMediasController@store', 'class'=>'dropzone']) !!}
 
-        {!! Form::close() !!}
-
-
+                    {!! Form::close() !!}
+                </div>
+            </div>
+        </div>
     </div>
 @stop
 @section('script')

@@ -2,7 +2,6 @@
 
 @section('content')
 
-
     <div class="col-md-8 col-md-offset-1">
         <h2>Create Category</h2>
         {!! Form::open(['method'=>'POST', 'action'=>'AdminCategoriesController@store']) !!}
@@ -18,6 +17,5 @@
 
         @include('includes.form_error')
     </div>
-
 
 @stop
