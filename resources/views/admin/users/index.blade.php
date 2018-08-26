@@ -33,7 +33,7 @@
                         <table width="100%" class="table table-striped table-bordered table-hover" id="userTable">
                             <thead>
                             <tr>
-                                <th>ID</th>
+                                <th style="width: 10px">ID</th>
                                 <th>Photo</th>
                                 <th>Name</th>
                                 <th>Email</th>
