@@ -33,11 +33,7 @@
                         <table width="100%" class="table table-striped table-bordered table-hover" id="userTable">
                             <thead>
                             <tr>
-<<<<<<< HEAD
-                                <th style="width: 10px">ID</th>
-=======
                                 <th style="width: 1%">ID</th>
->>>>>>> 4c500a76d2c47b46681ce5bc947f1004cb38d9f8
                                 <th>Photo</th>
                                 <th>Name</th>
                                 <th>Email</th>

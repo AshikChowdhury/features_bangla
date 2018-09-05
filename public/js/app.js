@@ -30943,7 +30943,7 @@ if (typeof jQuery === 'undefined') {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global, setImmediate) {/*!
- * Vue.js v2.5.16
+ * Vue.js v2.5.17
  * (c) 2014-2018 Evan You
  * Released under the MIT License.
  */
@@ -36032,7 +36032,7 @@ Object.defineProperty(Vue, 'FunctionalRenderContext', {
   value: FunctionalRenderContext
 });
 
-Vue.version = '2.5.16';
+Vue.version = '2.5.17';
 
 /*  */
 
@@ -42238,7 +42238,7 @@ module.exports.default = axios;
 /*!
  * Determine if an object is a Buffer
  *
- * @author   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
+ * @author   Feross Aboukhadijeh <https://feross.org>
  * @license  MIT
  */
 
@@ -43066,7 +43066,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\Example.vue"
+Component.options.__file = "resources/assets/js/components/Example.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -43075,9 +43075,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-b6ebd97a", Component.options)
+    hotAPI.createRecord("data-v-650f2efa", Component.options)
   } else {
-    hotAPI.reload("data-v-b6ebd97a", Component.options)
+    hotAPI.reload("data-v-650f2efa", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -43264,7 +43264,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-b6ebd97a", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-650f2efa", module.exports)
   }
 }
 
@@ -43272,7 +43272,7 @@ if (false) {
 /* 42 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: Missing binding E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\node-sass\\vendor\\win32-x64-57\\binding.node\nNode Sass could not find a binding for your current environment: Windows 64-bit with Node.js 8.x\n\nFound bindings for the following environments:\n  - Windows 64-bit with Node.js 6.x\n\nThis usually happens because your environment has changed since running `npm install`.\nRun `npm rebuild node-sass --force` to build the binding for your current environment.\n    at module.exports (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\node-sass\\lib\\binding.js:15:13)\n    at Object.<anonymous> (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\node-sass\\lib\\index.js:14:35)\n    at Module._compile (module.js:652:30)\n    at Object.Module._extensions..js (module.js:663:10)\n    at Module.load (module.js:565:32)\n    at tryModuleLoad (module.js:505:12)\n    at Function.Module._load (module.js:497:3)\n    at Module.require (module.js:596:17)\n    at require (internal/module.js:11:18)\n    at Object.<anonymous> (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\sass-loader\\lib\\loader.js:3:14)\n    at Module._compile (module.js:652:30)\n    at Object.Module._extensions..js (module.js:663:10)\n    at Module.load (module.js:565:32)\n    at tryModuleLoad (module.js:505:12)\n    at Function.Module._load (module.js:497:3)\n    at Module.require (module.js:596:17)\n    at require (internal/module.js:11:18)\n    at loadLoader (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\loadLoader.js:13:17)\n    at iteratePitchingLoaders (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:10)\n    at E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:18\n    at loadLoader (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n    at iteratePitchingLoaders (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:10)\n    at E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:18\n    at loadLoader (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n    at iteratePitchingLoaders (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:10)\n    at E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:18\n    at loadLoader (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n    at runLoaders (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\webpack\\lib\\NormalModule.js:195:19)\n    at E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\LoaderRunner.js:364:11\n    at E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\LoaderRunner.js:170:18\n    at loadLoader (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\loadLoader.js:27:11)\n    at iteratePitchingLoaders (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:10)\n    at E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:18\n    at loadLoader (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n    at iteratePitchingLoaders (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:10)\n    at E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:18\n    at loadLoader (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n    at iteratePitchingLoaders (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:10)\n    at E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:18\n    at loadLoader (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n    at iteratePitchingLoaders (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at runLoaders (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\loader-runner\\lib\\LoaderRunner.js:362:2)\n    at NormalModule.doBuild (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\webpack\\lib\\NormalModule.js:182:3)\n    at NormalModule.build (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\webpack\\lib\\NormalModule.js:275:15)\n    at Compilation.buildModule (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\webpack\\lib\\Compilation.js:157:10)\n    at moduleFactory.create (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\webpack\\lib\\Compilation.js:460:10)\n    at factory (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\webpack\\lib\\NormalModuleFactory.js:243:5)\n    at applyPluginsAsyncWaterfall (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\webpack\\lib\\NormalModuleFactory.js:94:13)\n    at E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\tapable\\lib\\Tapable.js:268:11\n    at NormalModuleFactory.params.normalModuleFactory.plugin (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\webpack\\lib\\CompatibilityPlugin.js:52:5)\n    at NormalModuleFactory.applyPluginsAsyncWaterfall (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\tapable\\lib\\Tapable.js:272:13)\n    at resolver (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\webpack\\lib\\NormalModuleFactory.js:69:10)\n    at process.nextTick (E:\\FeaturesBangla\\laravel_codehacking\\node_modules\\webpack\\lib\\NormalModuleFactory.js:196:7)\n    at _combinedTickCallback (internal/process/next_tick.js:131:7)");
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
