@@ -15,7 +15,7 @@
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>CopyPasteBd</title>
+    <title>Features Bangla</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
     <!--
     CSS
@@ -35,23 +35,23 @@
 <header>
 
     {{--<div class="header-top">--}}
-        {{--<div class="container">--}}
-            {{--<div class="row">--}}
-                {{--<div class="col-lg-6 col-md-6 col-sm-6 col-6 header-top-left no-padding">--}}
-                    {{--<ul>--}}
-                        {{--<li><a href="#"><i class="fa fa-facebook"></i></a></li>--}}
-                        {{--<li><a href="#"><i class="fa fa-twitter"></i></a></li>--}}
-                        {{--<li><a href="#"><i class="fa fa-dribbble"></i></a></li>--}}
-                    {{--</ul>--}}
-                {{--</div>--}}
-                {{--<div class="col-lg-6 col-md-6 col-sm-6 col-6 header-top-right no-padding">--}}
-                    {{--<ul>--}}
-                        {{--<li><a href="tel:+440 012 3654 896"><span class="lnr lnr-phone-handset"></span><span>+440 012 3654 896</span></a></li>--}}
-                        {{--<li><a href="https://colorlib.com/cdn-cgi/l/email-protection#2f5c5a5f5f405d5b6f4c4043405d43464d014c4042"><span class="lnr lnr-envelope"></span><span><span class="__cf_email__" data-cfemail="fd8e888d8d928f89bd9e9291928f91949fd39e9290">[email&#160;protected]</span></span></a></li>--}}
-                    {{--</ul>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
+    {{--<div class="container">--}}
+    {{--<div class="row">--}}
+    {{--<div class="col-lg-6 col-md-6 col-sm-6 col-6 header-top-left no-padding">--}}
+    {{--<ul>--}}
+    {{--<li><a href="#"><i class="fa fa-facebook"></i></a></li>--}}
+    {{--<li><a href="#"><i class="fa fa-twitter"></i></a></li>--}}
+    {{--<li><a href="#"><i class="fa fa-dribbble"></i></a></li>--}}
+    {{--</ul>--}}
+    {{--</div>--}}
+    {{--<div class="col-lg-6 col-md-6 col-sm-6 col-6 header-top-right no-padding">--}}
+    {{--<ul>--}}
+    {{--<li><a href="tel:+440 012 3654 896"><span class="lnr lnr-phone-handset"></span><span>+440 012 3654 896</span></a></li>--}}
+    {{--<li><a href="https://colorlib.com/cdn-cgi/l/email-protection#2f5c5a5f5f405d5b6f4c4043405d43464d014c4042"><span class="lnr lnr-envelope"></span><span><span class="__cf_email__" data-cfemail="fd8e888d8d928f89bd9e9291928f91949fd39e9290">[email&#160;protected]</span></span></a></li>--}}
+    {{--</ul>--}}
+    {{--</div>--}}
+    {{--</div>--}}
+    {{--</div>--}}
     {{--</div>--}}
     <div class="logo-wrap">
         <div class="container">
@@ -63,7 +63,7 @@
                 </div>
                 {{--<div class="col-lg-8 col-md-8 col-sm-12 logo-right no-padding ads-banner">--}}
                 <div class="col-lg-8 col-md-8 col-sm-12 logo-right no-padding ads-banner">
-                    <img class="img-fluid" src="/images/banner.png" alt="">
+                    <img class="img-fluid" src="/img/banner-ad.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -95,15 +95,15 @@
                         <span class="lnr lnr-magnifier"></span>
                     </label>
                     <span class="Search-close">
-								<span class="lnr lnr-cross"></span>
-							</span>
+                        <span class="lnr lnr-cross"></span>
+                    </span>
                 </form>
             </div>
         </div>
     </div>
 </header>
 
- @yield('content')
+@yield('content')
 
 <footer class="footer-area section-gap">
     <div class="container">
@@ -160,20 +160,19 @@
         </div>
         <div class="footer-bottom row align-items-center">
             <p class="footer-text m-0 col-lg-8 col-md-12">
-                Copyright &copy; CopyPasteBD All rights reserved
-             </p>
+                Copyright &copy; Features Bangla All rights reserved
+            </p>
             <div class="col-lg-4 col-md-12 footer-social">
                 <a href="#"><i class="fa fa-facebook"></i></a>
                 <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-dribbble"></i></a>
-                <a href="#"><i class="fa fa-behance"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
             </div>
         </div>
     </div>
 </footer>
 <!-- End footer Area -->
 <script src="/js/main/vendor/jquery-2.2.4.min.js"></script>
-<script src="../../../../cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/popper.min.js"></script>--}}
 <script src="/js/main/vendor/bootstrap.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
 <script src="/js/main/easing.min.js"></script>

@@ -1,15 +1,4 @@
-/******************************************************************
-Theme Name: Magazine 
-Description: 
-Author: Colorlib
-Author URI: 
-Version: 1.0
-Created: 
-******************************************************************/
-/*------------------------------------------------------------------
 
-
--------------------------------------------------------------------*/
 /*------------------------------------------------------------------
 [Table of contents]
 
@@ -652,9 +641,7 @@ td, th {
 }
 
 .inline-flex {
-  display: -webkit-inline-box;
   display: -webkit-inline-flex;
-  display: -moz-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
@@ -729,7 +716,6 @@ td, th {
 }
 
 .space-around {
-  -ms-flex-pack: distribute;
   -webkit-justify-content: space-around;
   -moz-justify-content: space-around;
   justify-content: space-around;
@@ -1329,7 +1315,7 @@ body {
 }
 
 .section-gap {
-  padding: 120px 0;
+  padding: 50px 0 0 0;
 }
 
 .alert-msg {
@@ -2477,7 +2463,7 @@ body {
   left: 0;
   width: 48%;
   height: 100%;
-  background: url(../img/about/about-img.jpg) no-repeat center center/cover;
+  background: url(../../img/about/about-img.jpg) no-repeat center center/cover;
   z-index: 1;
 }
 
@@ -2592,7 +2578,7 @@ body {
 
 .feedback-area .feedback-left .mn-accordion .accordion-item .accordion-heading .icon i {
   -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0eg);
+  -ms-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
 }
@@ -2642,7 +2628,7 @@ body {
 }
 
 .feedback-area .feedback-right {
-  background: url(../img/video-bg.jpg) center;
+  background: url(../../img/video-bg.jpg) center;
   background-size: cover;
   padding: 130px 0;
 }
@@ -2744,7 +2730,6 @@ body {
   text-align: center;
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
   -o-filter: grayscale(100%);
   filter: grayscale(100%);
   opacity: .3;
@@ -2757,7 +2742,6 @@ body {
 .brands-area .brand-wrap .single-brand:hover {
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
-  -ms-filter: grayscale(0%);
   -o-filter: grayscale(0%);
   filter: grayscale(0%);
   opacity: 1;
@@ -3099,7 +3083,6 @@ body {
 
 .start-video:hover {
   opacity: 1;
-  -webkit-filter: brightness 1;
 }
 
 div.thumbnail_container {
@@ -3273,7 +3256,8 @@ div.thumbnail_container .overlay-bg {
 }
 
 .footer-area .footer-bottom {
-  margin-top: 90px;
+  margin-top: 50px;
+
 }
 
 .footer-area .footer-bottom p {
@@ -3290,6 +3274,7 @@ div.thumbnail_container .overlay-bg {
 
 .footer-area .footer-bottom .footer-social {
   text-align: right;
+  padding-bottom: 15px;
 }
 
 @media (max-width: 991px) {
