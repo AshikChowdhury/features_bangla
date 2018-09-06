@@ -34,25 +34,24 @@
 <body>
 <header>
 
-    {{--<div class="header-top">--}}
-    {{--<div class="container">--}}
-    {{--<div class="row">--}}
-    {{--<div class="col-lg-6 col-md-6 col-sm-6 col-6 header-top-left no-padding">--}}
-    {{--<ul>--}}
-    {{--<li><a href="#"><i class="fa fa-facebook"></i></a></li>--}}
-    {{--<li><a href="#"><i class="fa fa-twitter"></i></a></li>--}}
-    {{--<li><a href="#"><i class="fa fa-dribbble"></i></a></li>--}}
-    {{--</ul>--}}
-    {{--</div>--}}
-    {{--<div class="col-lg-6 col-md-6 col-sm-6 col-6 header-top-right no-padding">--}}
-    {{--<ul>--}}
-    {{--<li><a href="tel:+440 012 3654 896"><span class="lnr lnr-phone-handset"></span><span>+440 012 3654 896</span></a></li>--}}
-    {{--<li><a href="https://colorlib.com/cdn-cgi/l/email-protection#2f5c5a5f5f405d5b6f4c4043405d43464d014c4042"><span class="lnr lnr-envelope"></span><span><span class="__cf_email__" data-cfemail="fd8e888d8d928f89bd9e9291928f91949fd39e9290">[email&#160;protected]</span></span></a></li>--}}
-    {{--</ul>--}}
-    {{--</div>--}}
-    {{--</div>--}}
-    {{--</div>--}}
-    {{--</div>--}}
+    <div class="header-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-6 header-top-left no-padding">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-6 header-top-right no-padding">
+                    <ul>
+                        <li><a href="mob:+8801521218513"><span class="lnr lnr-phone-handset"></span><span>+880 152 1218 513</span></a></li>
+                        <li><a href="#"><span class="lnr lnr-envelope"></span><span><span class="__cf_email__" >featuresbangla@gmail.com</span></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="logo-wrap">
         <div class="container">
             <div class="row justify-content-between align-items-center">
