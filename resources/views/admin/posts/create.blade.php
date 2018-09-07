@@ -25,14 +25,29 @@
                         {!! Form::text('title', null, ['class'=>'form-control']) !!}
                     </div>
 
-                    <div class="form-group col-md-3 col-sm-10">
+                    <div class="form-group col-md-4 col-sm-10">
+                        {!! Form::label('user_id', 'Author') !!}
+                        {!! Form::select('user_id', ['' => 'Select Author'] + $authors, null, ['class'=>'form-control']) !!}
+                    </div>
+
+                    <div class="form-group col-md-4 col-sm-10">
                         {!! Form::label('category_id', 'Category') !!}
                         {!! Form::select('category_id', ['' => 'Choose Categories'] + $categories, null, ['class'=>'form-control']) !!}
                     </div>
 
-                    <div class="form-group col-md-6 col-sm-10">
+                    <div class="form-group col-md-4 col-sm-10">
+                        {!! Form::label('post_type', 'Post Type') !!}
+                        {!! Form::select('post_type', ['' => 'Select Type'] + $types, null, ['class'=>'form-control']) !!}
+                    </div>
+
+                    <div class="form-group col-md-4 col-sm-10">
                         {!! Form::label('photo_id', 'Post Photo') !!}
                         {!! Form::file('photo_id', null, ['class'=>'form-control']) !!}
+                    </div>
+
+                    <div class="form-group col-md-8 col-sm-10">
+                        {!! Form::label('photo_source', 'Photo Source') !!}
+                        {!! Form::text('photo_source', null, ['class'=>'form-control']) !!}
                     </div>
 
                     <div class="form-group col-md-12 col-sm-12">

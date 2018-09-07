@@ -52,6 +52,12 @@ Route::group(['middleware'=>'admin'],function (){
         'edit'=>'admin.categories.edit',
     ]]);
 
+    Route::resource('admin/posttypes', 'AdminPostTypesController',['names'=>[
+        'index'=>'admin.types.index',
+        'store'=>'admin.types.store',
+        'edit'=>'admin.types.edit',
+    ]]);
+
     Route::resource('admin/media', 'AdminMediasController',['names'=>[
 
         'index'=>'admin.media.index',

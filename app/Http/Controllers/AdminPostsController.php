@@ -6,6 +6,8 @@ use App\Category;
 use App\Http\Requests\PostCreateRequest;
 use App\Photo;
 use App\Post;
+use App\PostType;
+use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -34,7 +36,12 @@ class AdminPostsController extends Controller
     public function create()
     {
         $categories = Category::pluck('name','id')->all();
-        return view('admin.posts.create',compact('categories'));
+
+        $authors = User::pluck('name','id')->all();
+
+        $types = PostType::pluck('name','id')->all();
+
+        return view('admin.posts.create',compact('categories','authors','types'));
     }
 
     /**
@@ -49,7 +56,7 @@ class AdminPostsController extends Controller
 
         $input['slug'] = bangla_slug($request->title,'-').'-'.time();
 
-        $user = Auth::user();
+        $input['created_by'] = Auth::user()->id;
 
         if ($file = $request->file('photo_id')){
             $name = time().$file->getClientOriginalName();
@@ -58,7 +65,7 @@ class AdminPostsController extends Controller
             $input['photo_id'] = $photo->id;
         }
 
-        $user->posts()->create($input);
+        Post::create($input);
 
         Session::flash('created_post','Post Has Been Successfully Created');
 
@@ -88,7 +95,11 @@ class AdminPostsController extends Controller
 
         $categories = Category::pluck('name','id')->all();
 
-        return view('admin.posts.edit',compact('post','categories'));
+        $authors = User::pluck('name','id')->all();
+
+        $types = PostType::pluck('name','id')->all();
+
+        return view('admin.posts.edit',compact('post','categories','authors','types'));
 
     }
 
@@ -103,6 +114,7 @@ class AdminPostsController extends Controller
     {
         $input = $request->all();
         $input['slug'] = bangla_slug($request->title,'-').'-'.time();
+        $input['updated_by'] = Auth::user()->id;
 
         if ($file = $request->file('photo_id')){
 
@@ -144,7 +156,7 @@ class AdminPostsController extends Controller
     }
 
 
-
+//******* Single post view *******//
     public function post($slug){
 
         $post = Post::where('slug',$slug)->first();

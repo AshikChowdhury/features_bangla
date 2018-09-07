@@ -56,7 +56,7 @@
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-4 col-md-4 col-sm-12 logo-left no-padding">
-                    <a href="index-2.html">
+                    <a href="/">
                         <img class="img-fluid" src="/images/logo.png" alt="">
                     </a>
                 </div>

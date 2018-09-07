@@ -9,12 +9,20 @@ class Post extends Model
     protected $fillable = [
 
         'user_id',
+        'post_type',
+        'created_by',
+        'updated_by',
         'category_id',
         'slug',
         'photo_id',
+        'photo_source',
         'title',
         'body'
 
+    ];
+    protected $dates = [
+        'created_at',
+        'updated_at'
     ];
 
     public function user(){

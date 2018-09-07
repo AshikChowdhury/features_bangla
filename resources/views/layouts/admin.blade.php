@@ -111,12 +111,8 @@
                             <li>
                                 <a href="{{route('admin.posts.index')}}">All Posts</a>
                             </li>
-
                             <li>
-                                <a href="{{route('admin.posts.create')}}">Create Post</a>
-                            </li>
-                            <li>
-                                {{--<a href="{{route('admin.comments.index')}}">All Comments</a>--}}
+                                <a href="{{route('admin.types.index')}}">Post Types</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
