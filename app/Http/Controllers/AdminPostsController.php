@@ -21,6 +21,12 @@ class AdminPostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     public function index()
     {
         $posts = Post::orderBy('id','desc')->get();
@@ -171,4 +177,5 @@ class AdminPostsController extends Controller
 
         return view('post', compact('post', 'next', 'previous'));
     }
+
 }

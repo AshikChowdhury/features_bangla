@@ -1196,7 +1196,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .Search {
-  width: 400px;
+  width: 240px;
   position: relative;
 }
 
@@ -1451,7 +1451,7 @@ body {
 
 .top-post-area .top-post-left .top-post-details {
   position: absolute;
-  bottom: 30px;
+  bottom: 50px;
   left: 40px;
 }
 

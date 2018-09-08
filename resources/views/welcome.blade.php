@@ -10,58 +10,58 @@
                     <div class="col-lg-8 top-post-left">
                         <div class="feature-image-thumb relative">
                             <div class="overlay overlay-bg"></div>
-                            <img class="img-fluid" src="img/top-post1.jpg" alt="">
+                            <img class="img-fluid" src="{{$feature->photo ? $feature->photo->file : $feature->photoPlaceHolder()}}" alt="">
                         </div>
                         <div class="top-post-details">
                             <ul class="tags">
-                                <li><a href="#">Food Habit</a></li>
+                                <li><a href="#">{{$feature->category->name}}</a></li>
                             </ul>
-                            <a href="image-post.html">
-                                <h3>A Discount Toner Cartridge Is Better Than Ever.</h3>
+                            <a href="{{route('home.post',$feature->slug)}}">
+                                <h3>{{$feature->title}}</h3>
                             </a>
                             <ul class="meta">
-                                <li><a href="#"><span class="lnr lnr-user"></span>Mark wiens</a></li>
-                                <li><a href="#"><span class="lnr lnr-calendar-full"></span>03 April, 2018</a></li>
-                                <li><a href="#"><span class="lnr lnr-bubble"></span>06 Comments</a></li>
+                                <li><a href="#"><span class="lnr lnr-user"></span>{{$feature->user->name}}</a></li>
+                                <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$feature->created_at->diffForHumans()}}</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-4 top-post-right">
+                        @if($subfeature1)
                         <div class="single-top-post">
                             <div class="feature-image-thumb relative">
                                 <div class="overlay overlay-bg"></div>
-                                <img class="img-fluid" src="img/top-post2.jpg" alt="">
+                                <img class="img-fluid" src="{{$subfeature1->photo ? $subfeature1->photo->file : $subfeature1->photoPlaceHolder()}}" alt="">
                             </div>
                             <div class="top-post-details">
                                 <ul class="tags">
-                                    <li><a href="#">Food Habit</a></li>
+                                    <li><a href="#">{{$subfeature1->category->name}}</a></li>
                                 </ul>
-                                <a href="image-post.html">
-                                    <h4>A Discount Toner Cartridge Is Better Than Ever.</h4>
+                                <a href="{{route('home.post',$subfeature1->slug)}}">
+                                    <h4>{{$subfeature1->title}}</h4>
                                 </a>
                                 <ul class="meta">
-                                    <li><a href="#"><span class="lnr lnr-user"></span>Mark wiens</a></li>
-                                    <li><a href="#"><span class="lnr lnr-calendar-full"></span>03 April, 2018</a></li>
-                                    <li><a href="#"><span class="lnr lnr-bubble"></span>06 Comments</a></li>
+                                    <li><a href="#"><span class="lnr lnr-user"></span>{{$subfeature1->user->name}}</a></li>
+                                    <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$subfeature1->created_at->diffForHumans()}}</a></li>
                                 </ul>
                             </div>
                         </div>
+                        @endif
                         <div class="single-top-post mt-10">
                             <div class="feature-image-thumb relative">
                                 <div class="overlay overlay-bg"></div>
-                                <img class="img-fluid" src="img/top-post3.jpg" alt="">
+                                <img class="img-fluid" src="{{$subfeature2->photo ? $subfeature2->photo->file : $subfeature2->photoPlaceHolder()}}" alt="">
                             </div>
                             <div class="top-post-details">
                                 <ul class="tags">
-                                    <li><a href="#">Food Habit</a></li>
+                                    <li><a href="#">{{$subfeature2->category->name}}</a></li>
                                 </ul>
-                                <a href="image-post.html">
-                                    <h4>A Discount Toner Cartridge Is Better</h4>
+                                <a href="">
+                                    <h4>{{$subfeature1->title}}</h4>
                                 </a>
                                 <ul class="meta">
-                                    <li><a href="#"><span class="lnr lnr-user"></span>Mark wiens</a></li>
-                                    <li><a href="#"><span class="lnr lnr-calendar-full"></span>03 April, 2018</a></li>
-                                    <li><a href="#"><span class="lnr lnr-bubble"></span>06 Comments</a></li>
+                                    <li><a href="#"><span class="lnr lnr-user"></span>{{$subfeature1->user->name}}</a></li>
+                                    <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$subfeature1->created_at->diffForHumans()}}</a></li>
+                                    {{--<li><a href="#"><span class="lnr lnr-bubble"></span>06 Comments</a></li>--}}
                                 </ul>
                             </div>
                         </div>

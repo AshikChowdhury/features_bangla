@@ -10,16 +10,16 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Category;
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Route::auth();
 
 Route::get('/logout', 'Auth\LoginController@logout');
 
-Route::get('/home', 'HomeController@index');
+Route::get('/', 'HomeController@index');
 
 Route::get('/post/{slug}', ['as'=>'home.post', 'uses'=>'AdminPostsController@post']);
 
@@ -88,4 +88,11 @@ Route::group(['middleware'=>'admin'],function (){
 
 Route::group(['middleware'=>'auth'],function (){
     Route::post('comment/reply', 'CommentsRepliesController@createReply');
+});
+
+
+//**** View Composer ****//
+View::composer(['layouts.blog-post'], function ($view){
+    $categories = Category::take(9)->get();
+    $view->with('categories', $categories);
 });

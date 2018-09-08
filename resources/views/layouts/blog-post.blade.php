@@ -71,20 +71,15 @@
         <div class="row align-items-center justify-content-between">
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
-                    <li class="menu-active"><a href="index-2.html">Home</a></li>
-                    <li><a href="archive.html">Archive</a></li>
-                    <li><a href="category.html">Category</a></li>
-                    <li class="menu-has-children"><a href="#">Post Types</a>
-                        <ul>
-                            <li><a href="standard-post.html">Standard Post</a></li>
-                            <li><a href="image-post.html">Image Post</a></li>
-                            <li><a href="gallery-post.html">Gallery Post</a></li>
-                            <li><a href="video-post.html">Video Post</a></li>
-                            <li><a href="audio-post.html">Audio Post</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li class="menu-active"><a href="/">Home</a></li>
+                    @foreach($categories as $category)
+                    <li><a href="">{{$category->name}}</a></li>
+                    @endforeach
+                    {{--<li class="menu-has-children"><a href="#">Post Types</a>--}}
+                        {{--<ul>--}}
+                            {{--<li><a href="standard-post.html">Standard Post</a></li>--}}
+                        {{--</ul>--}}
+                    {{--</li>--}}
                 </ul>
             </nav><!-- #nav-menu-container -->
             <div class="navbar-right">
@@ -137,7 +132,7 @@
             <div class="col-lg-2 col-md-6 single-footer-widget">
                 <h4>Resources</h4>
                 <ul>
-                    <li><a href="#">Guides</a></li>
+                    <li><a href="/login">Admin</a></li>
                     <li><a href="#">Research</a></li>
                     <li><a href="#">Experts</a></li>
                     <li><a href="#">Agencies</a></li>
