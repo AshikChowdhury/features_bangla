@@ -34,17 +34,17 @@
 
                     <div class="form-group col-md-4 col-sm-10">
                         {!! Form::label('user_id', 'Author') !!}
-                        {!! Form::select('user_id', ['' => 'Select Author'] + $authors, null, ['class'=>'form-control']) !!}
-                    </div>
-
-                    <div class="form-group col-md-4 col-sm-10">
-                        {!! Form::label('post_type', 'Post Type') !!}
-                        {!! Form::select('post_type', ['' => 'Select Type'] + $types, null, ['class'=>'form-control']) !!}
+                        {!! Form::select('user_id', ['' => 'Select Author'] + $authors, null, ['class'=>'form-control', 'id'=>'author']) !!}
                     </div>
 
                     <div class="form-group col-md-4 col-sm-10">
                         {!! Form::label('category_id', 'Category') !!}
-                        {!! Form::select('category_id', ['' => 'Choose Categories'] + $categories, null, ['class'=>'form-control']) !!}
+                        {!! Form::select('category_id', ['' => 'Choose Categories'] + $categories, null, ['class'=>'form-control', 'id'=>'category']) !!}
+                    </div>
+
+                    <div class="form-group col-md-4 col-sm-10">
+                        {!! Form::label('post_type', 'Post Type') !!}
+                        {!! Form::select('post_type', ['' => 'Select Type'] + $types, null, ['class'=>'form-control', 'id'=>'type']) !!}
                     </div>
 
                     <div class="form-group col-md-4 col-sm-10">
@@ -77,5 +77,13 @@
             </div>
         </div>
     </div>
-
 @stop
+@section('script')
+    <script>
+        $(document).ready(function() {
+            $('#author').select2();
+            $('#category').select2();
+            $('#type').select2();
+        });
+    </script>
+@endsection
