@@ -1,7 +1,30 @@
 @extends('layouts.blog-post')
 
 @section('content')
-
+    <style>
+        #feature{
+            height: 440px;
+        }
+        .subfe{
+            height: 215px;
+        }
+        @media screen and (max-width: 1366px) and (min-width: 993px) {
+            #feature{
+                height: 370px;
+            }
+            .subfe{
+                height: 180px;
+            }
+        }
+        @media screen and (max-width: 992px) {
+            #feature{
+                height: auto;
+            }
+            .subfe{
+                height: auto;
+            }
+        }
+    </style>
     <div class="site-main-container">
         <!-- Start top-post Area -->
         <section class="top-post-area pt-10">
@@ -9,7 +32,7 @@
                 <div class="row small-gutters">
                     @if($feature)
                     <div class="col-lg-8 top-post-left">
-                        <div class="feature-image-thumb relative" style="height: 440px">
+                        <div class="feature-image-thumb relative" id="feature">
                             <div class="overlay overlay-bg"></div>
                             <img class="img-fluid" src="{{$feature->photo ? $feature->photo->file : $feature->photoPlaceHolder()}}" alt="">
                         </div>
@@ -30,7 +53,7 @@
                     <div class="col-lg-4 top-post-right">
                         @if($subfeature1)
                         <div class="single-top-post">
-                            <div class="feature-image-thumb relative" style="height: 215px">
+                            <div class="feature-image-thumb relative subfe" >
                                 <div class="overlay overlay-bg"></div>
                                 <img class="img-fluid" src="{{$subfeature1->photo ? $subfeature1->photo->file : $subfeature1->photoPlaceHolder()}}" alt="">
                             </div>
@@ -50,7 +73,7 @@
                         @endif
                         @if($subfeature2)
                         <div class="single-top-post mt-10">
-                            <div class="feature-image-thumb relative" style="height: 215px">
+                            <div class="feature-image-thumb relative subfe">
                                 <div class="overlay overlay-bg"></div>
                                 <img class="img-fluid" src="{{$subfeature2->photo ? $subfeature2->photo->file : $subfeature2->photoPlaceHolder()}}" alt="">
                             </div>
