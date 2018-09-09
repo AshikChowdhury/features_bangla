@@ -7,8 +7,9 @@
         <section class="top-post-area pt-10">
             <div class="container no-padding">
                 <div class="row small-gutters">
+                    @if($feature)
                     <div class="col-lg-8 top-post-left">
-                        <div class="feature-image-thumb relative">
+                        <div class="feature-image-thumb relative" style="height: 440px">
                             <div class="overlay overlay-bg"></div>
                             <img class="img-fluid" src="{{$feature->photo ? $feature->photo->file : $feature->photoPlaceHolder()}}" alt="">
                         </div>
@@ -25,10 +26,11 @@
                             </ul>
                         </div>
                     </div>
+                    @endif
                     <div class="col-lg-4 top-post-right">
                         @if($subfeature1)
                         <div class="single-top-post">
-                            <div class="feature-image-thumb relative">
+                            <div class="feature-image-thumb relative" style="height: 215px">
                                 <div class="overlay overlay-bg"></div>
                                 <img class="img-fluid" src="{{$subfeature1->photo ? $subfeature1->photo->file : $subfeature1->photoPlaceHolder()}}" alt="">
                             </div>
@@ -46,8 +48,9 @@
                             </div>
                         </div>
                         @endif
+                        @if($subfeature2)
                         <div class="single-top-post mt-10">
-                            <div class="feature-image-thumb relative">
+                            <div class="feature-image-thumb relative" style="height: 215px">
                                 <div class="overlay overlay-bg"></div>
                                 <img class="img-fluid" src="{{$subfeature2->photo ? $subfeature2->photo->file : $subfeature2->photoPlaceHolder()}}" alt="">
                             </div>
@@ -56,15 +59,16 @@
                                     <li><a href="#">{{$subfeature2->category->name}}</a></li>
                                 </ul>
                                 <a href="">
-                                    <h4>{{$subfeature1->title}}</h4>
+                                    <h4>{{$subfeature2->title}}</h4>
                                 </a>
                                 <ul class="meta">
-                                    <li><a href="#"><span class="lnr lnr-user"></span>{{$subfeature1->user->name}}</a></li>
-                                    <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$subfeature1->created_at->diffForHumans()}}</a></li>
+                                    <li><a href="#"><span class="lnr lnr-user"></span>{{$subfeature2->user->name}}</a></li>
+                                    <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$subfeature2->created_at->diffForHumans()}}</a></li>
                                     {{--<li><a href="#"><span class="lnr lnr-bubble"></span>06 Comments</a></li>--}}
                                 </ul>
                             </div>
                         </div>
+                        @endif
                     </div>
                     <div class="col-lg-12">
                         <div class="news-tracker-wrap">
