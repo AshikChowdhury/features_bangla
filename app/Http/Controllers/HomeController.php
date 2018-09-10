@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Http\Requests;
 use App\Post;
 use Illuminate\Http\Request;
@@ -35,8 +36,17 @@ class HomeController extends Controller
             ->with(['photo', 'category', 'user'])
             ->first();
 
+        $categories = Category::all();
+        $cate_posts[] = null;
+        foreach ($categories as $category){
+            $cate_posts[] = Post::where('category_id', $category->id)
+                ->with(['category','user','photo'])
+                ->orderBy('created_at', 'desc')
+                ->first();
+        }
+
 //        dd($subfeature2);
-        return view('welcome', compact('feature', 'subfeature1', 'subfeature2'));
+        return view('welcome', compact('feature', 'subfeature1', 'subfeature2','cate_posts'));
 
     }
 
@@ -56,4 +66,6 @@ class HomeController extends Controller
 
         return view('post', compact('post', 'next', 'previous'));
     }
+
+
 }

@@ -31,71 +31,71 @@
             <div class="container no-padding">
                 <div class="row small-gutters">
                     @if($feature)
-                    <div class="col-lg-8 top-post-left">
-                        <div class="feature-image-thumb relative" id="feature">
-                            <div class="overlay overlay-bg"></div>
-                            <img class="img-fluid" src="{{$feature->photo ? $feature->photo->file : $feature->photoPlaceHolder()}}" alt="">
+                        <div class="col-lg-8 top-post-left">
+                            <div class="feature-image-thumb relative" id="feature">
+                                <div class="overlay overlay-bg"></div>
+                                <img class="img-fluid" src="{{$feature->photo ? $feature->photo->file : $feature->photoPlaceHolder()}}" alt="">
+                            </div>
+                            <div class="top-post-details">
+                                <ul class="tags">
+                                    <li><a href="#">{{$feature->category->name}}</a></li>
+                                </ul>
+                                <a href="{{route('home.post',[$feature->category->name,$feature->slug])}}">
+                                    <h3>{{$feature->title}}</h3>
+                                </a>
+                                <ul class="meta">
+                                    <li><a href="#"><span class="lnr lnr-user"></span>{{$feature->user->name}}</a></li>
+                                    <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$feature->created_at->format('d F, Y')}}</a></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="top-post-details">
-                            <ul class="tags">
-                                <li><a href="#">{{$feature->category->name}}</a></li>
-                            </ul>
-                            <a href="{{route('home.post',[$feature->category->name,$feature->slug])}}">
-                                <h3>{{$feature->title}}</h3>
-                            </a>
-                            <ul class="meta">
-                                <li><a href="#"><span class="lnr lnr-user"></span>{{$feature->user->name}}</a></li>
-                                <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$feature->created_at->format('d F, Y')}}</a></li>
-                            </ul>
-                        </div>
-                    </div>
                     @endif
                     <div class="col-lg-4 top-post-right">
                         @if($subfeature1)
-                        <div class="single-top-post">
-                            <div class="feature-image-thumb relative subfe" >
-                                <div class="overlay overlay-bg"></div>
-                                <img class="img-fluid" src="{{$subfeature1->photo ? $subfeature1->photo->file : $subfeature1->photoPlaceHolder()}}" alt="">
+                            <div class="single-top-post">
+                                <div class="feature-image-thumb relative subfe" >
+                                    <div class="overlay overlay-bg"></div>
+                                    <img class="img-fluid" src="{{$subfeature1->photo ? $subfeature1->photo->file : $subfeature1->photoPlaceHolder()}}" alt="">
+                                </div>
+                                <div class="top-post-details">
+                                    <ul class="tags">
+                                        <li><a href="#">{{$subfeature1->category->name}}</a></li>
+                                    </ul>
+                                    <a href="{{route('home.post',[$subfeature1->category->name,$subfeature1->slug])}}">
+                                        <h4>{{$subfeature1->title}}</h4>
+                                    </a>
+                                    <ul class="meta">
+                                        <li><a href="#"><span class="lnr lnr-user"></span>{{$subfeature1->user->name}}</a></li>
+                                        <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$subfeature1->created_at->format('d F, Y')}}</a></li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="top-post-details">
-                                <ul class="tags">
-                                    <li><a href="#">{{$subfeature1->category->name}}</a></li>
-                                </ul>
-                                <a href="{{route('home.post',[$subfeature1->category->name,$subfeature1->slug])}}">
-                                    <h4>{{$subfeature1->title}}</h4>
-                                </a>
-                                <ul class="meta">
-                                    <li><a href="#"><span class="lnr lnr-user"></span>{{$subfeature1->user->name}}</a></li>
-                                    <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$subfeature1->created_at->format('d F, Y')}}</a></li>
-                                </ul>
-                            </div>
-                        </div>
                         @endif
                         @if($subfeature2)
-                        <div class="single-top-post mt-10">
-                            <div class="feature-image-thumb relative subfe">
-                                <div class="overlay overlay-bg"></div>
-                                <img class="img-fluid" src="{{$subfeature2->photo ? $subfeature2->photo->file : $subfeature2->photoPlaceHolder()}}" alt="">
+                            <div class="single-top-post mt-10">
+                                <div class="feature-image-thumb relative subfe">
+                                    <div class="overlay overlay-bg"></div>
+                                    <img class="img-fluid" src="{{$subfeature2->photo ? $subfeature2->photo->file : $subfeature2->photoPlaceHolder()}}" alt="">
+                                </div>
+                                <div class="top-post-details">
+                                    <ul class="tags">
+                                        <li><a href="#">{{$subfeature2->category->name}}</a></li>
+                                    </ul>
+                                    <a href="{{route('home.post',[$subfeature2->category->name,$subfeature2->slug])}}">
+                                        <h4>{{$subfeature2->title}}</h4>
+                                    </a>
+                                    <ul class="meta">
+                                        <li><a href="#"><span class="lnr lnr-user"></span>{{$subfeature2->user->name}}</a></li>
+                                        <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$subfeature2->created_at->format('d F, Y')}}</a></li>
+                                        {{--<li><a href="#"><span class="lnr lnr-bubble"></span>06 Comments</a></li>--}}
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="top-post-details">
-                                <ul class="tags">
-                                    <li><a href="#">{{$subfeature2->category->name}}</a></li>
-                                </ul>
-                                <a href="{{route('home.post',[$subfeature2->category->name,$subfeature2->slug])}}">
-                                    <h4>{{$subfeature2->title}}</h4>
-                                </a>
-                                <ul class="meta">
-                                    <li><a href="#"><span class="lnr lnr-user"></span>{{$subfeature2->user->name}}</a></li>
-                                    <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$subfeature2->created_at->format('d F, Y')}}</a></li>
-                                    {{--<li><a href="#"><span class="lnr lnr-bubble"></span>06 Comments</a></li>--}}
-                                </ul>
-                            </div>
-                        </div>
                         @endif
                     </div>
                     <div class="col-lg-12">
                         <div class="news-tracker-wrap">
-                            <h6><span>Breaking News:</span>   <a href="#">Astronomy Binoculars A Great Alternative</a></h6>
+                            <h6><span>Breaking News: </span><a href="#"> Astronomy Binoculars A Great Alternative</a></h6>
                         </div>
                     </div>
                 </div>
@@ -110,106 +110,36 @@
                         <!-- Start latest-post Area -->
                         <div class="latest-post-wrap">
                             <h4 class="cat-title">Latest News</h4>
-                            <div class="single-latest-post row align-items-center">
-                                <div class="col-lg-5 post-left">
-                                    <div class="feature-img relative">
-                                        <div class="overlay overlay-bg"></div>
-                                        <img class="img-fluid" src="img/l1.jpg" alt="">
-                                    </div>
-                                    <ul class="tags">
-                                        <li><a href="#">Lifestyle</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-lg-7 post-right">
-                                    <a href="image-post.html">
-                                        <h4>A Discount Toner Cartridge Is
-                                            Better Than Ever.</h4>
-                                    </a>
-                                    <ul class="meta">
-                                        <li><a href="#"><span class="lnr lnr-user"></span>Mark wiens</a></li>
-                                        <li><a href="#"><span class="lnr lnr-calendar-full"></span>03 April, 2018</a></li>
-                                        <li><a href="#"><span class="lnr lnr-bubble"></span>06 Comments</a></li>
-                                    </ul>
-                                    <p class="excert">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="single-latest-post row align-items-center">
-                                <div class="col-lg-5 post-left">
-                                    <div class="feature-img relative">
-                                        <div class="overlay overlay-bg"></div>
-                                        <img class="img-fluid" src="img/l2.jpg" alt="">
-                                    </div>
-                                    <ul class="tags">
-                                        <li><a href="#">Science</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-lg-7 post-right">
-                                    <a href="image-post.html">
-                                        <h4>A Discount Toner Cartridge Is
-                                            Better Than Ever.</h4>
-                                    </a>
-                                    <ul class="meta">
-                                        <li><a href="#"><span class="lnr lnr-user"></span>Mark wiens</a></li>
-                                        <li><a href="#"><span class="lnr lnr-calendar-full"></span>03 April, 2018</a></li>
-                                        <li><a href="#"><span class="lnr lnr-bubble"></span>06 Comments</a></li>
-                                    </ul>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="single-latest-post row align-items-center">
-                                <div class="col-lg-5 post-left">
-                                    <div class="feature-img relative">
-                                        <div class="overlay overlay-bg"></div>
-                                        <img class="img-fluid" src="img/l3.jpg" alt="">
-                                    </div>
-                                    <ul class="tags">
-                                        <li><a href="#">Travel</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-lg-7 post-right">
-                                    <a href="image-post.html">
-                                        <h4>A Discount Toner Cartridge Is
-                                            Better Than Ever.</h4>
-                                    </a>
-                                    <ul class="meta">
-                                        <li><a href="#"><span class="lnr lnr-user"></span>Mark wiens</a></li>
-                                        <li><a href="#"><span class="lnr lnr-calendar-full"></span>03 April, 2018</a></li>
-                                        <li><a href="#"><span class="lnr lnr-bubble"></span>06 Comments</a></li>
-                                    </ul>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="single-latest-post row align-items-center">
-                                <div class="col-lg-5 post-left">
-                                    <div class="feature-img relative">
-                                        <div class="overlay overlay-bg"></div>
-                                        <img class="img-fluid" src="img/l4.jpg" alt="">
-                                    </div>
-                                    <ul class="tags">
-                                        <li><a href="#">Fashion</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-lg-7 post-right">
-                                    <a href="image-post.html">
-                                        <h4>A Discount Toner Cartridge Is
-                                            Better Than Ever.</h4>
-                                    </a>
-                                    <ul class="meta">
-                                        <li><a href="#"><span class="lnr lnr-user"></span>Mark wiens</a></li>
-                                        <li><a href="#"><span class="lnr lnr-calendar-full"></span>03 April, 2018</a></li>
-                                        <li><a href="#"><span class="lnr lnr-bubble"></span>06 Comments</a></li>
-                                    </ul>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
-                                    </p>
-                                </div>
-                            </div>
+                            @if($cate_posts)
+                                @foreach($cate_posts as $cate_post)
+                                    @if($cate_post)
+                                        <div class="single-latest-post row align-items-center">
+                                            <div class="col-lg-5 post-left">
+                                                <div class="feature-img relative">
+                                                    <div class="overlay overlay-bg"></div>
+                                                    <img class="img-fluid" src="{{$cate_post->photo ? $cate_post->photo->file : $cate_post->photoPlaceHolder()}}" alt="">
+                                                </div>
+                                                <ul class="tags">
+                                                    <li><a href="#">{{$cate_post->category->name}}</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-lg-7 post-right">
+                                                <a href="{{route('home.post',[$cate_post->category->name,$cate_post->slug])}}">
+                                                    <h4>{{$cate_post->title}}</h4>
+                                                </a>
+                                                <ul class="meta">
+                                                    <li><a href="#"><span class="lnr lnr-user"></span>{{$cate_post->user->name}}</a></li>
+                                                    <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$cate_post->created_at->format('d F, Y')}}</a></li>
+                                                    {{--<li><a href="#"><span class="lnr lnr-bubble"></span>06 Comments</a></li>--}}
+                                                </ul>
+                                                <p class="excert">
+                                                    {!! str_limit(strip_tags($cate_post->body), 100, ' <strong>.....</strong>') !!}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    @endif
+                                @endforeach
+                            @endif
                         </div>
                         <!-- End latest-post Area -->
 
