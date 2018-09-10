@@ -49,7 +49,7 @@ class AdminUsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return array
      */
-    public function store(UsersRequest $request)
+    public function store(Request $request)
     {
         Session::flash('created_user', 'The User Has Been Created');
 
@@ -110,7 +110,7 @@ class AdminUsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UsersEditRequest $request, $id)
+    public function update(Request $request, $id)
     {
         Session::flash('updated_user', 'The User Has Been Updated');
 

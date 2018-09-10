@@ -40,12 +40,12 @@
                             <ul class="tags">
                                 <li><a href="#">{{$feature->category->name}}</a></li>
                             </ul>
-                            <a href="{{route('home.post',$feature->slug)}}">
+                            <a href="{{route('home.post',[$feature->category->name,$feature->slug])}}">
                                 <h3>{{$feature->title}}</h3>
                             </a>
                             <ul class="meta">
                                 <li><a href="#"><span class="lnr lnr-user"></span>{{$feature->user->name}}</a></li>
-                                <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$feature->created_at->diffForHumans()}}</a></li>
+                                <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$feature->created_at->format('d F, Y')}}</a></li>
                             </ul>
                         </div>
                     </div>
@@ -61,12 +61,12 @@
                                 <ul class="tags">
                                     <li><a href="#">{{$subfeature1->category->name}}</a></li>
                                 </ul>
-                                <a href="{{route('home.post',$subfeature1->slug)}}">
+                                <a href="{{route('home.post',[$subfeature1->category->name,$subfeature1->slug])}}">
                                     <h4>{{$subfeature1->title}}</h4>
                                 </a>
                                 <ul class="meta">
                                     <li><a href="#"><span class="lnr lnr-user"></span>{{$subfeature1->user->name}}</a></li>
-                                    <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$subfeature1->created_at->diffForHumans()}}</a></li>
+                                    <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$subfeature1->created_at->format('d F, Y')}}</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -81,12 +81,12 @@
                                 <ul class="tags">
                                     <li><a href="#">{{$subfeature2->category->name}}</a></li>
                                 </ul>
-                                <a href="">
+                                <a href="{{route('home.post',[$subfeature2->category->name,$subfeature2->slug])}}">
                                     <h4>{{$subfeature2->title}}</h4>
                                 </a>
                                 <ul class="meta">
                                     <li><a href="#"><span class="lnr lnr-user"></span>{{$subfeature2->user->name}}</a></li>
-                                    <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$subfeature2->created_at->diffForHumans()}}</a></li>
+                                    <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$subfeature2->created_at->format('d F, Y')}}</a></li>
                                     {{--<li><a href="#"><span class="lnr lnr-bubble"></span>06 Comments</a></li>--}}
                                 </ul>
                             </div>

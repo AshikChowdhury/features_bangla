@@ -7,7 +7,7 @@
             <div class="col-lg-12">
 
                 @if(Session::has('deleted_user'))
-                    <div class="alert alert-danger col-md-3">
+                    <div class="alert alert-danger">
                         <h5>{{session('deleted_user')}}</h5>
                     </div>
                 @elseif(Session::has('created_user'))

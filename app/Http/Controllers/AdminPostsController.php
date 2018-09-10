@@ -56,7 +56,7 @@ class AdminPostsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(PostCreateRequest $request)
+    public function store(Request $request)
     {
         $input = $request->all();
 
@@ -116,7 +116,7 @@ class AdminPostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(PostCreateRequest $request, $id)
+    public function update(Request $request, $id)
     {
         $input = $request->all();
         $input['slug'] = bangla_slug($request->title,'-').'-'.time();
@@ -159,23 +159,6 @@ class AdminPostsController extends Controller
         Session::flash('deleted_post','Post Has Been Successfully Deleted');
 
         return redirect('/admin/posts');
-    }
-
-
-//******* Single post view *******//
-    public function post($slug){
-
-        $post = Post::where('slug',$slug)->first();
-
-//        dd($post);
-
-        $next = Post::where('id', '>', $post->id)->orderBy('id')->first();
-
-        $previous = Post::where('id', '<', $post->id)->orderBy('id')->first();
-
-//        $comments = $post->comments()->whereIsActive(1)->get();
-
-        return view('post', compact('post', 'next', 'previous'));
     }
 
 }

@@ -27,11 +27,33 @@ class HomeController extends Controller
     //******* Posts for landing page *******//
     public function index()
     {
-        $feature = Post::where('post_type',1)->orderBy('id', 'desc')->first();
-        $subfeature1 = Post::where('post_type',2)->orderBy('id', 'desc')->first();
-        $subfeature2 = Post::where('post_type',3)->orderBy('id', 'desc')->first();
-//        dd($subfeature);
-        return view('welcome', compact('feature','subfeature1','subfeature2'));
+        $feature = Post::where('post_type', 1)->orderBy('id', 'desc')->first();
+        $subfeature1 = Post::where('post_type', 2)->orderBy('id', 'desc')->first();
 
+        $subfeature2 = Post::where('post_type', 3)
+            ->orderBy('id', 'desc')
+            ->with(['photo', 'category', 'user'])
+            ->first();
+
+//        dd($subfeature2);
+        return view('welcome', compact('feature', 'subfeature1', 'subfeature2'));
+
+    }
+
+    //******* Single post view *******//
+    public function post($category, $slug){
+
+        $post = Post::where('slug',$slug)
+            ->with(['user','category','photo'])
+            ->first();
+
+        if ($post){
+            $next = Post::where('id', '>', $post->id)->orderBy('id')->first();
+            $previous = Post::where('id', '<', $post->id)->orderBy('id')->first();
+        }
+
+//        $comments = $post->comments()->whereIsActive(1)->get();
+
+        return view('post', compact('post', 'next', 'previous'));
     }
 }

@@ -23,17 +23,17 @@
                                 </a>
                                 <ul class="meta pb-20">
                                     <li><a href="#"><span class="lnr lnr-user"></span>{{$post->user->name}}</a></li>
-                                    <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$post->created_at->diffForHumans()}}</a></li>
+                                    <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$post->created_at->format('d F, Y')}}</a></li>
                                     <li><a href="#"><span class="lnr lnr-bubble"></span>06 </a></li>
                                 </ul>
                                 <p>{!!$post->body!!}</p>
 
                                 <div class="navigation-wrap justify-content-between d-flex">
                                     @if (isset($previous))
-                                    <a class="prev" href="{{route('home.post',$previous->slug)}}"><span class="lnr lnr-arrow-left"></span>Prev Post</a>
+                                    <a class="prev" href="{{route('home.post',[$previous->category->name,$previous->slug])}}"><span class="lnr lnr-arrow-left"></span>Prev Post</a>
                                     @endif
                                     @if (isset($next))
-                                    <a class="next" href="{{route('home.post',$next->slug)}}">Next Post<span class="lnr lnr-arrow-right"></span></a>
+                                    <a class="next" href="{{route('home.post',[$next->category->name,$next->slug])}}">Next Post<span class="lnr lnr-arrow-right"></span></a>
                                     @endif
                                 </div>
                                 <hr>

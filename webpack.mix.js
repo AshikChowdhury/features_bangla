@@ -28,6 +28,7 @@ mix.scripts([
     'resources/assets/js/libs/datatables-plugins/dataTables.bootstrap.min.js',
     'resources/assets/js/libs/datatables-responsive/dataTables.responsive.js',
     'resources/assets/js/libs/bootstrap-datepicker.min.js',
+    'resources/assets/js/libs/jquery.validate.min.js',
     'resources/assets/js/libs/select2.min.js',
     'resources/assets/js/libs/custom.js'
 

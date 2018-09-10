@@ -54,7 +54,7 @@
                                     <td>{{$post->category ? $post->category->name : "Uncategorized"}}</td>
                                     <td style="width: 25%"><a href="{{route('admin.posts.edit', $post->id)}}">{{$post->title}}</a></td>
                                     {{--<td>{{str_limit($post->body, 30)}}</td>--}}
-                                    <td><a href="{{route('home.post',$post->slug)}}">View Post</a></td>
+                                    <td><a href="{{route('home.post',[$post->category->name, $post->slug])}}">View Post</a></td>
                                     {{--<td><button class="btn-success btn-xs">{{$user->is_active == 1 ? 'Active' : 'Inactive' }}</button></td>--}}
                                     {{--<td><a href="{{route('admin.comments.show',$post->id)}}">View Comments</a></td>--}}
                                     <td>{{$post->created_at->diffForHumans()}}</td>
