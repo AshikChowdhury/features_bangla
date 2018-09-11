@@ -73,7 +73,7 @@
                 <ul class="nav-menu">
                     <li class="{{Request::is('/') ? 'menu-item-active' : ''}}"><a href="/">Home</a></li>
                     @foreach($categories as $category)
-                    <li><a href="">{{$category->name}}</a></li>
+                    <li><a href="{{route('home.category', $category->name)}}">{{$category->name}}</a></li>
                     @endforeach
                     {{--<li class="menu-has-children"><a href="#">Post Types</a>--}}
                         {{--<ul>--}}
