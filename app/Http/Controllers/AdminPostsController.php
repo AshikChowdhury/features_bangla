@@ -73,7 +73,7 @@ class AdminPostsController extends Controller
 
         Post::create($input);
 
-        Session::flash('created_post','Post Has Been Successfully Created');
+        Session::flash('success','Post Has Been Successfully Created');
 
         return redirect('admin/posts');
     }
@@ -135,7 +135,7 @@ class AdminPostsController extends Controller
 //        Auth::user()->posts()->whereId($id)->first()->update($input);
         Post::whereId($id)->first()->update($input);
 
-        Session::flash('updated_post','Post has been successfully updated');
+        Session::flash('info','Post has been successfully updated');
 
         return redirect('/admin/posts');
     }
@@ -156,7 +156,7 @@ class AdminPostsController extends Controller
 
         $post->delete();
 
-        Session::flash('deleted_post','Post Has Been Successfully Deleted');
+        Session::flash('danger','Post Has Been Successfully Deleted');
 
         return redirect('/admin/posts');
     }

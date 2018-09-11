@@ -71,7 +71,7 @@
         <div class="row align-items-center justify-content-between">
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
-                    <li class="menu-active"><a href="/">Home</a></li>
+                    <li class="{{Request::is('/') ? 'menu-item-active' : ''}}"><a href="/">Home</a></li>
                     @foreach($categories as $category)
                     <li><a href="">{{$category->name}}</a></li>
                     @endforeach

@@ -59,8 +59,9 @@
                         </div>
                         <!-- End single-post Area -->
                     </div>
-
-                    @include('includes.sidebar')
+                    <div class="col-lg-4">
+                        @include('includes.post_sidebar')
+                    </div>
                 </div>
             </div>
         </section>

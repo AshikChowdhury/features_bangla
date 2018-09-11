@@ -51,13 +51,18 @@ class AdminUsersController extends Controller
      */
     public function store(Request $request)
     {
-        Session::flash('created_user', 'The User Has Been Created');
+        $this->validate($request, [
+            'email' => 'unique:users',
+        ]);
+
+        $user = new User;
 
         if(trim($request->password) == ''){
             $input = $request->except('password');
         }else{
             $input = $request->all();
             $input['password'] = bcrypt($request->password);
+            $user->password = $input['password'];
         }
 
         if ($file = $request->file('photo_id')){
@@ -67,12 +72,16 @@ class AdminUsersController extends Controller
 
             $photo = Photo::create(['file'=>$name]);
             $input['photo_id'] = $photo->id;
+            $user->photo_id = $input['photo_id'];
         }
+        $user->name = $input['name'];
+        $user->email = $input['email'];
+        $user->role_id = $input['role_id'];
+        $user->is_active = $input['is_active'];
 
-        User::create($input);
+        $user->save();
 
-
-        return redirect('/admin/users');
+        return redirect('/admin/users')->with('success', 'The User Has Been Created');
 //        return $request->all();
     }
 
@@ -112,15 +121,15 @@ class AdminUsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        Session::flash('updated_user', 'The User Has Been Updated');
-
         $user = User::findOrFail($id);
+
+//        dd($user);
 
         if(trim($request->password) == ''){
             $input = $request->except('password');
         }else{
             $input = $request->all();
-            $input['password'] = bcrypt($request->password);
+            $user->password = bcrypt($request->password);
         }
 
         if ($file = $request->file('photo_id')){
@@ -132,11 +141,16 @@ class AdminUsersController extends Controller
             $photo = Photo::create(['file' => $name]);
 
             $input['photo_id'] = $photo->id;
+            $user->photo_id = $input['photo_id'];
         }
+        $user->name = $input['name'];
+        $user->email = $input['email'];
+        $user->role_id = $input['role_id'];
+        $user->is_active = $input['is_active'];
 
-        $user->update($input);
+        $user->save();
 
-        return redirect('/admin/users');
+        return redirect('/admin/users')->with('info', 'The User Has Been Updated');
     }
 
     /**
@@ -155,7 +169,7 @@ class AdminUsersController extends Controller
 
         $user->delete();
 
-        Session::flash('deleted_user', 'The User Has Been Deleted');
+        Session::flash('danger', 'The User Has Been Deleted');
 
         return redirect('admin/users');
 

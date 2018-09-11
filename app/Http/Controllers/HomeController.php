@@ -67,5 +67,9 @@ class HomeController extends Controller
         return view('post', compact('post', 'next', 'previous'));
     }
 
+    //******* category wise page *******//
+    public function CategoryPage($category){
+
+    }
 
 }

@@ -4,20 +4,7 @@
 
     <div class="row" style="padding-top: 20px">
         <div class="col-lg-12">
-
-            @if(Session::has('deleted_post'))
-                <div class="alert alert-danger">
-                    <h5>{{session('deleted_post')}}</h5>
-                </div>
-            @elseif(Session::has('created_post'))
-                <div class="alert alert-success">
-                    <h5>{{session('created_post')}}</h5>
-                </div>
-            @elseif(Session::has('updated_post'))
-                <div class="alert alert-info">
-                    <h5>{{session('updated_post')}}</h5>
-                </div>
-            @endif
+            @include('includes.messages')
             <div class="col-lg-4">
                 <strong><h3>Posts</h3></strong>
             </div>

@@ -86,18 +86,18 @@
                         </div>
                         <!-- /input-group -->
                     </li>
-                    <li>
+                    <li class="{{Request::is('/') ? 'active' : ''}}">
                         <a href="/admin"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                     </li>
 
-                    <li>
+                    <li class="{{Request::is('admin.users') ? 'active' : ''}}">
                         <a href="#"><i class="fa fa-users fa-fw"></i> Users<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li>
+                            <li class="{{Request::is('admin.users.index') ? 'active' : ''}}">
                                 <a href="{{route('admin.users.index')}}">All Users</a>
                             </li>
 
-                            <li>
+                            <li class="{{Request::is('admin.users.create') ? 'active' : ''}}">
                                 <a href="{{route('admin.users.create')}}">Create User</a>
                             </li>
 
