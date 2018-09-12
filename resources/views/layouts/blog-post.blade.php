@@ -73,13 +73,17 @@
                 <ul class="nav-menu">
                     <li class="{{Request::is('/') ? 'menu-item-active' : ''}}"><a href="/">Home</a></li>
                     @foreach($categories as $category)
-                    <li><a href="{{route('home.category', $category->name)}}">{{$category->name}}</a></li>
+                        <li><a href="{{route('home.category', $category->name)}}">{{$category->name}}</a></li>
                     @endforeach
-                    {{--<li class="menu-has-children"><a href="#">Post Types</a>--}}
-                        {{--<ul>--}}
-                            {{--<li><a href="standard-post.html">Standard Post</a></li>--}}
-                        {{--</ul>--}}
-                    {{--</li>--}}
+                    @if(!$more_categories->isEmpty())
+                        <li class="menu-has-children"><a href="#">More</a>
+                            <ul>
+                                @foreach($more_categories as $more_category)
+                                    <li><a href="{{route('home.category', $more_category->name)}}">{{$more_category->name}}</a></li>
+                                @endforeach
+                            </ul>
+                        </li>
+                    @endif
                 </ul>
             </nav><!-- #nav-menu-container -->
             <div class="navbar-right">

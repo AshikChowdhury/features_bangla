@@ -24,7 +24,6 @@
                                 {!! Form::label('name', 'Name ', ['class' => 'require']) !!}
                                 {!! Form::text('name', null, ['class'=>'form-control','id'=>'name','name'=>'name']) !!}
                             </div>
-
                             <div class="form-group col-lg-6">
                                 {!! Form::label('email', 'Email ',['class' => 'require']) !!}
                                 {!! Form::email('email', null, ['class'=>'form-control','id'=>'email','name'=>'email']) !!}

@@ -3,6 +3,12 @@
 @section('content')
 
     <div class="row" style="padding-top: 20px">
+        <style>
+            .require:after{
+                content:'*';
+                color:red;
+            }
+        </style>
         <div class="col-md-12 col-sm-12">
             <div class="col-md-12 col-sm-10">
                 <strong><h3>Categories</h3></strong>
@@ -12,10 +18,17 @@
                     <div class="col-md-4 col-sm-10">
                         {!! Form::open(['method'=>'POST', 'action'=>'AdminCategoriesController@store']) !!}
                         <div class="form-group">
-                            {!! Form::label('name', 'Name') !!}
-                            {!! Form::text('name', null, ['class'=>'form-control']) !!}
+                            {!! Form::label('name', 'Name ', ['class' => 'require']) !!}
+                            {!! Form::text('name', null, ['class'=>'form-control', 'required']) !!}
                         </div>
-
+                        <div class="form-group">
+                            {!! Form::label('serial', 'Serial ',['class' => 'require']) !!}
+                            {!! Form::number('serial', null, ['class'=>'form-control','required', 'placeholder'=> 'Must Be Number and Unique']) !!}
+                        </div>
+                        <div class="form-group">
+                            {!! Form::label('status', 'Status ', ['class' => 'require']) !!}
+                            {!! Form::select('status', [1=>'Active',0=>'Inactive'], 1, ['class'=>'form-control','required']) !!}
+                        </div>
                         <div class="form-group">
                             {!! Form::submit('Create Category', ['class'=>'btn btn-primary']) !!}
                         </div>
@@ -24,26 +37,13 @@
                         @include('includes.form_error')
                     </div>
                     <div class="col-md-8 col-sm-10">
-
-                        @if(Session::has('category_created'))
-                            <div class="alert alert-success">
-                                <h5>{{session('category_created')}}</h5>
-                            </div>
-                        @elseif(Session::has('category_updated'))
-                            <div class="alert alert-info">
-                                <h5>{{session('category_updated')}}</h5>
-                            </div>
-                        @elseif(Session::has('category_deleted'))
-                            <div class="alert alert-danger">
-                                <h5>{{session('category_deleted')}}</h5>
-                            </div>
-                        @endif
-
+                        @include('includes.messages')
                         <table width="100%" class="table table-striped table-bordered table-hover" id="catTable">
                             <thead>
                             <tr>
-                                <th style="width: 1%">ID</th>
+                                <th style="width: 1%">SL</th>
                                 <th>Name</th>
+                                <th class="text-center">Status</th>
                                 <th>Created</th>
                             </tr>
                             </thead>
@@ -52,10 +52,16 @@
 
                                 @foreach($categories as $category)
                                     <tr>
-                                        <td>{{$category->id}}</td>
+                                        <td class="text-center">{{$category->serial}}</td>
                                         <td><a href="{{route('admin.categories.edit', $category->id)}}">{{$category->name}}</a></td>
-                                        {{--<td><button class="btn-success btn-xs">{{$user->is_active == 1 ? 'Active' : 'Inactive' }}</button></td>--}}
-                                        <td>{{$category->created_at ? $category->created_at->diffForHumans() : 'No Created Time'}}</td>
+                                        <td class="text-center">
+                                            @if($category->status == 1)
+                                                <button class="btn-success btn-xs">Active</button>
+                                            @else
+                                                <button class="btn-danger btn-xs">Deactive</button>
+                                            @endif
+                                        </td>
+                                        <td>{{$category->created_at ? $category->created_at->format('d F, Y') : 'No Created Time'}}</td>
                                     </tr>
                                 @endforeach
                             @endif

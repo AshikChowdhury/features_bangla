@@ -47,12 +47,14 @@ class AdminCategoriesController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
+            'serial' => 'unique:categories'
         ]);
+
         $input = $request->all();
 
         Category::create($input);
 
-        Session::flash('category_created','Category Has Been Successfully Created');
+        Session::flash('success','Category Has Been Successfully Created');
 
         return redirect('admin/categories');
     }
@@ -100,7 +102,7 @@ class AdminCategoriesController extends Controller
 
         $category->update($input);
 
-        Session::flash('category_updated','Category Has Been Successfully Updated');
+        Session::flash('info','Category Has Been Successfully Updated');
 
         return redirect('/admin/categories');
 
@@ -116,7 +118,7 @@ class AdminCategoriesController extends Controller
     {
         $category = Category::findOrFail($id);
 
-        Session::flash('category_deleted','Category Has Been Successfully Deleted');
+        Session::flash('danger','Category Has Been Successfully Deleted');
 
         $category->delete();
 

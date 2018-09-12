@@ -95,6 +95,12 @@ Route::group(['middleware'=>'auth'],function (){
 
 //**** View Composer ****//
 View::composer(['layouts.blog-post'], function ($view){
-    $categories = Category::take(9)->get();
-    $view->with('categories', $categories);
+    $categories = Category::where('serial', '<=', 7)
+        ->where('status',1)
+        ->get();
+    $more_categories = Category::where('serial', '>', 7)
+        ->where('status',1)
+        ->get();
+    $view->with('categories', $categories)
+         ->with('more_categories', $more_categories);
 });

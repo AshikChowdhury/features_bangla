@@ -9,19 +9,26 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     {!! Form::model($category,['method'=>'PATCH', 'action'=>['AdminCategoriesController@update',$category->id]]) !!}
-                    <div class="form-group">
+                    <div class="form-group col-md-4">
                         {!! Form::label('name', 'Name') !!}
                         {!! Form::text('name', null, ['class'=>'form-control']) !!}
                     </div>
-
-                    <div class="form-group">
-                        {!! Form::submit('Update Category', ['class'=>'btn btn-primary col-sm-3']) !!}
+                    <div class="form-group col-md-3">
+                        {!! Form::label('serial', 'Serial ',['class' => 'require']) !!}
+                        {!! Form::number('serial', null, ['class'=>'form-control','required', 'placeholder'=> 'Must Be Number and Unique']) !!}
+                    </div>
+                    <div class="form-group col-md-3">
+                        {!! Form::label('status', 'Status ', ['class' => 'require']) !!}
+                        {!! Form::select('status', [1=>'Active',0=>'Inactive'], null, ['class'=>'form-control','required']) !!}
+                    </div>
+                    <div class="form-group col-md-3">
+                        {!! Form::submit('Update Category', ['class'=>'btn btn-primary']) !!}
                     </div>
                     {!! Form::close() !!}
 
                     {!! Form::open(['method'=>'DELETE', 'action'=>['AdminCategoriesController@destroy', $category->id]]) !!}
-                    <div class="form-group">
-                        {!! Form::submit('Delete Category', ['class'=>'btn btn-danger col-sm-2 col-sm-offset-1']) !!}
+                    <div class="form-group col-md-2">
+                        {!! Form::submit('Delete Category', ['class'=>'btn btn-danger']) !!}
                     </div>
                     {!! Form::close() !!}
                 </div>

@@ -31,7 +31,7 @@
                         <!-- Start latest-post Area -->
                         <div class="latest-post-wrap">
                             <h4 class="cat-title">Latest {{$category}} Article</h4>
-                            @if($posts)
+                            @if(!$posts->isEmpty())
                                 @foreach($posts as $post)
                                     @if($post)
                                     <div class="single-latest-post row align-items-center">

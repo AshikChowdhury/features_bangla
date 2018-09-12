@@ -71,9 +71,11 @@ class HomeController extends Controller
     public function CategoryPage($category){
         $find_cat = Category::whereName($category)->first();
 
-        $posts = Post::where('category_id',$find_cat->id)
-            ->with(['user','category','photo'])
-            ->paginate(8);
+        if ($find_cat){
+            $posts = Post::where('category_id',$find_cat->id)
+                ->with(['user','category','photo'])
+                ->paginate(8);
+        }
 
 //        dd($posts);
         return view('category_post', compact('posts','category'));
