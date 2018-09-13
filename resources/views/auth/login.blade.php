@@ -20,6 +20,12 @@
     <link href="/css/main/login_style.css" rel='stylesheet' type='text/css' />
     <!-- online fonts-->
     <link href="https://fonts.googleapis.com/css?family=Amiri:400,400i,700,700i" rel="stylesheet">
+    <style>
+        .help-block{
+            background-color: #d61b1b;
+            padding: 0 10px 0 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -58,7 +64,8 @@
 
             <div class="w3ls-bot">
                 <input type="submit" value="LOGIN">
-                <a class="forget" href="{{ route('password.request') }}">
+                {{--<a class="forget" href="{{ route('password.request') }}">--}}
+                <a class="forget" href="#">
                     Forgot Your Password?
                 </a>
             </div>
