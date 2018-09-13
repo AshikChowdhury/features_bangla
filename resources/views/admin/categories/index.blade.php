@@ -44,7 +44,7 @@
                                 <th style="width: 1%">SL</th>
                                 <th>Name</th>
                                 <th class="text-center">Status</th>
-                                <th>Created</th>
+                                <th>Created At</th>
                             </tr>
                             </thead>
                             <tbody>

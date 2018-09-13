@@ -44,8 +44,8 @@
                     </div>
 
                     <div class="form-group col-md-4 col-sm-10">
-                        {!! Form::label('post_type', 'Post Type ',['class' => 'require']) !!}
-                        {!! Form::select('post_type', ['' => 'Select Type'] + $types, null, ['class'=>'form-control', 'id'=>'type','required']) !!}
+                        {!! Form::label('post_type', 'Post Type ') !!}
+                        {!! Form::select('post_type', ['' => 'Select Type'] + $types, null, ['class'=>'form-control', 'id'=>'type']) !!}
                     </div>
 
                     <div class="form-group col-md-4 col-sm-10">

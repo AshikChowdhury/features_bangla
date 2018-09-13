@@ -6,6 +6,7 @@ use App\Category;
 use App\Http\Requests;
 use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
 {
@@ -28,7 +29,10 @@ class HomeController extends Controller
     //******* Posts for landing page *******//
     public function index()
     {
-        $feature = Post::where('post_type', 1)->orderBy('id', 'desc')->first();
+        $feature = Post::where('post_type', 1)
+            ->with(['photo', 'category', 'user'])
+            ->orderBy('id', 'desc')->first();
+
         $subfeature1 = Post::where('post_type', 2)
             ->orderBy('id', 'desc')
             ->with(['photo', 'category', 'user'])
@@ -38,6 +42,21 @@ class HomeController extends Controller
             ->orderBy('id', 'desc')
             ->with(['photo', 'category', 'user'])
             ->first();
+
+        $most_visited = Post::orderBy('visit_count', 'desc')
+            ->with(['photo', 'category', 'user'])
+            ->first();
+
+        $most_visits = Post::orderBy('visit_count', 'desc')
+            ->with(['photo', 'category', 'user'])
+            ->skip(1)
+            ->take(2)
+            ->get();
+        $randoms = Post::with(['photo', 'category', 'user'])
+            ->inRandomOrder()
+            ->take(3)
+            ->distinct()
+            ->get();
 
         $categories = Category::all();
 
@@ -49,8 +68,7 @@ class HomeController extends Controller
                 ->first();
         }
 
-//        dd($subfeature2);
-        return view('welcome', compact('feature', 'subfeature1', 'subfeature2','cate_posts'));
+        return view('welcome', compact('feature', 'subfeature1', 'subfeature2','cate_posts', 'most_visited','most_visits','randoms'));
 
     }
 
@@ -60,6 +78,11 @@ class HomeController extends Controller
         $post = Post::where('slug',$slug)
             ->with(['user','category','photo'])
             ->first();
+        $blogKey = 'blog_'. $post->id;
+        if (!Session::has($blogKey)){
+            $post->increment('visit_count');
+            Session::put($blogKey,1);
+        }
 
         if ($post){
             $next = Post::where('id', '>', $post->id)->orderBy('id')->first();

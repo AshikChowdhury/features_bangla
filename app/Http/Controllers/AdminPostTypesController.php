@@ -50,7 +50,7 @@ class AdminPostTypesController extends Controller
 
         PostType::create($input);
 
-        Session::flash('category_created','Type Has Been Successfully Created');
+        Session::flash('success','Type Has Been Successfully Created');
 
         return redirect('admin/posttypes');
     }
@@ -98,7 +98,7 @@ class AdminPostTypesController extends Controller
 
         $type->update($input);
 
-        Session::flash('category_updated','Type Has Been Successfully Updated');
+        Session::flash('info','Type Has Been Successfully Updated');
 
         return redirect('/admin/posttypes');
     }
@@ -113,7 +113,7 @@ class AdminPostTypesController extends Controller
     {
         $type = PostType::findOrFail($id);
 
-        Session::flash('category_deleted','type Has Been Successfully Deleted');
+        Session::flash('danger','type Has Been Successfully Deleted');
 
         $type->delete();
 

@@ -45,7 +45,7 @@ class AdminPostsController extends Controller
 
         $authors = User::pluck('name','id')->all();
 
-        $types = PostType::pluck('name','id')->all();
+        $types = PostType::pluck('name','serial')->all();
 
         return view('admin.posts.create',compact('categories','authors','types'));
     }
@@ -103,7 +103,7 @@ class AdminPostsController extends Controller
 
         $authors = User::pluck('name','id')->all();
 
-        $types = PostType::pluck('name','id')->all();
+        $types = PostType::pluck('name','serial')->all();
 
         return view('admin.posts.edit',compact('post','categories','authors','types'));
 

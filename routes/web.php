@@ -11,6 +11,7 @@
 |
 */
 use App\Category;
+use App\Post;
 //Route::get('/', function () {
 //    return view('welcome');
 //});
@@ -94,13 +95,18 @@ Route::group(['middleware'=>'auth'],function (){
 
 
 //**** View Composer ****//
-View::composer(['layouts.blog-post'], function ($view){
+View::composer(['layouts.blog-post','includes.post_sidebar'], function ($view){
     $categories = Category::where('serial', '<=', 7)
         ->where('status',1)
         ->get();
     $more_categories = Category::where('serial', '>', 7)
         ->where('status',1)
         ->get();
+    $editor = Post::where('post_type', 4)
+        ->with(['photo', 'category', 'user'])
+        ->orderBy('id', 'desc')->first();
+
     $view->with('categories', $categories)
-         ->with('more_categories', $more_categories);
+         ->with('more_categories', $more_categories)
+         ->with('editor', $editor);
 });
