@@ -29,7 +29,10 @@ class HomeController extends Controller
     public function index()
     {
         $feature = Post::where('post_type', 1)->orderBy('id', 'desc')->first();
-        $subfeature1 = Post::where('post_type', 2)->orderBy('id', 'desc')->first();
+        $subfeature1 = Post::where('post_type', 2)
+            ->orderBy('id', 'desc')
+            ->with(['photo', 'category', 'user'])
+            ->first();
 
         $subfeature2 = Post::where('post_type', 3)
             ->orderBy('id', 'desc')
@@ -37,6 +40,7 @@ class HomeController extends Controller
             ->first();
 
         $categories = Category::all();
+
         $cate_posts[] = null;
         foreach ($categories as $category){
             $cate_posts[] = Post::where('category_id', $category->id)
@@ -71,11 +75,10 @@ class HomeController extends Controller
     public function CategoryPage($category){
         $find_cat = Category::whereName($category)->first();
 
-        if ($find_cat){
-            $posts = Post::where('category_id',$find_cat->id)
-                ->with(['user','category','photo'])
-                ->paginate(8);
-        }
+        $posts = Post::where('category_id',$find_cat->id)
+            ->with(['user','category','photo'])
+            ->paginate(8);
+
 
 //        dd($posts);
         return view('category_post', compact('posts','category'));
