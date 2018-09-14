@@ -1,10 +1,18 @@
 <style>
     .editor-img{
-        height: 180px
+        height: 180px;
+    }
+    .thumb-img{
+        height: 80px;
+        width: 120px;
     }
     @media screen and (max-width: 1366px) and (min-width: 993px) {
         .editor-img{
-            height: 150px
+            height: 150px;
+        }
+        .thumb-img{
+            height: 80px;
+            width: 120px;
         }
     }
     @media screen and (max-width: 992px) {
@@ -40,90 +48,54 @@
                     </p>
                 </div>
             @endif
-            <div class="post-lists">
-                <div class="single-post d-flex flex-row">
-                    <div class="thumb">
-                        <img src="http://placehold.it/100x100" alt="">
+            @if(!$editor_others->isEmpty())
+                @foreach($editor_others as $editor_other)
+                    <div class="post-lists">
+                        <div class="single-post d-flex flex-row">
+                            <div class="thumb">
+                                <img class="thumb-img" src="{{$editor_other->photo ? $editor_other->photo->file : $editor_other->photoPlaceHolder()}}" alt="">
+                            </div>
+                            <div class="detail">
+                                <a href="{{route('home.post',[$editor_other->category->name,$editor_other->slug])}}"><h6>{{$editor_other->title}}</h6></a>
+                                <ul class="meta">
+                                    <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$editor_other->created_at->format('d F, Y')}}</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="detail">
-                        <a href="image-post.html"><h6>Help Finding Information
-                                Online is so easy</h6></a>
-                        <ul class="meta">
-                            <li><a href="#"><span class="lnr lnr-calendar-full"></span>03 April, 2018</a></li>
-                            <li><a href="#"><span class="lnr lnr-bubble"></span>06</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+                 @endforeach
+            @endif
         </div>
     </div>
+
+    {{--//***** Add Place *****//--}}
     <div class="single-sidebar-widget ads-widget">
         <img class="img-fluid" src="img/sidebar-ads.jpg" alt="">
     </div>
 
     <div class="single-sidebar-widget most-popular-widget">
         <h6 class="title">Most Popular</h6>
-        <div class="single-list flex-row d-flex">
-            <div class="thumb">
-                <img src="img/m1.jpg" alt="">
+        @if(!$side_most_visits->isEmpty())
+            @foreach($side_most_visits as $side_most_visit)
+            <div class="single-list flex-row d-flex">
+                <div class="thumb">
+                    <img class="thumb-img" src="{{$side_most_visit->photo ? $side_most_visit->photo->file : $side_most_visit->photoPlaceHolder()}}" alt="">
+                </div>
+                <div class="details">
+                    <a href="{{route('home.post',[$side_most_visit->category->name,$side_most_visit->slug])}}">
+                        <h6>{{$side_most_visit->title}}</h6>
+                    </a>
+                    <ul class="meta">
+                        <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$side_most_visit->created_at->format('d F, Y')}}</a></li>
+                        <li><a href="#"><span class="lnr lnr-eye"></span>{{$side_most_visit->visit_count}}</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="details">
-                <a href="image-post.html">
-                    <h6>Help Finding Information
-                        Online is so easy</h6>
-                </a>
-                <ul class="meta">
-                    <li><a href="#"><span class="lnr lnr-calendar-full"></span>03 April, 2018</a></li>
-                    <li><a href="#"><span class="lnr lnr-bubble"></span>06</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="single-list flex-row d-flex">
-            <div class="thumb">
-                <img src="img/m2.jpg" alt="">
-            </div>
-            <div class="details">
-                <a href="image-post.html">
-                    <h6>Compatible Inkjet Cartr
-                        world famous</h6>
-                </a>
-                <ul class="meta">
-                    <li><a href="#"><span class="lnr lnr-calendar-full"></span>03 April, 2018</a></li>
-                    <li><a href="#"><span class="lnr lnr-bubble"></span>06</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="single-list flex-row d-flex">
-            <div class="thumb">
-                <img src="img/m3.jpg" alt="">
-            </div>
-            <div class="details">
-                <a href="image-post.html">
-                    <h6>5 Tips For Offshore Soft
-                        Development </h6>
-                </a>
-                <ul class="meta">
-                    <li><a href="#"><span class="lnr lnr-calendar-full"></span>03 April, 2018</a></li>
-                    <li><a href="#"><span class="lnr lnr-bubble"></span>06</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="single-list flex-row d-flex">
-            <div class="thumb">
-                <img src="img/m4.jpg" alt="">
-            </div>
-            <div class="details">
-                <a href="image-post.html">
-                    <h6>5 Tips For Offshore Soft
-                        Development </h6>
-                </a>
-                <ul class="meta">
-                    <li><a href="#"><span class="lnr lnr-calendar-full"></span>03 April, 2018</a></li>
-                    <li><a href="#"><span class="lnr lnr-bubble"></span>06</a></li>
-                </ul>
-            </div>
-        </div>
+            @endforeach
+        @endif
     </div>
+
+
     <div class="single-sidebar-widget social-network-widget">
         <h6 class="title">Social Networks</h6>
         <ul class="social-list">
@@ -156,5 +128,10 @@
                 <a href="#">Subscribe</a>
             </li>
         </ul>
+    </div>
+
+    {{--//***** Add Place *****//--}}
+    <div class="single-sidebar-widget ads-widget">
+        <img class="img-fluid" src="img/sidebar-ads.jpg" alt="">
     </div>
 </div>

@@ -106,7 +106,22 @@ View::composer(['layouts.blog-post','includes.post_sidebar'], function ($view){
         ->with(['photo', 'category', 'user'])
         ->orderBy('id', 'desc')->first();
 
+    $editor_others = Post::where('post_type', 4)
+        ->with(['photo', 'category', 'user'])
+        ->orderBy('id', 'desc')
+        ->skip(1)
+        ->take(4)
+        ->get();
+
+    $side_most_visits = Post::orderBy('visit_count', 'desc')
+        ->with(['photo', 'category', 'user'])
+        ->skip(3)
+        ->take(5)
+        ->get();
+
     $view->with('categories', $categories)
          ->with('more_categories', $more_categories)
-         ->with('editor', $editor);
+         ->with('editor', $editor)
+         ->with('editor_others', $editor_others)
+         ->with('side_most_visits', $side_most_visits);
 });

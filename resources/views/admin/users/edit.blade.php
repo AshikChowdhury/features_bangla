@@ -26,20 +26,20 @@
                                 {!! Form::model($user,['method'=>'PATCH', 'action'=>['AdminUsersController@update', $user->id],'files'=>true,'id'=>'UserForm']) !!}
                                 <div class="form-group col-lg-6">
                                     {!! Form::label('name', 'Name ', ['class' => 'require']) !!}
-                                    {!! Form::text('name', null, ['class'=>'form-control','id'=>'name','name'=>'name']) !!}
+                                    {!! Form::text('name', null, ['class'=>'form-control','id'=>'name','name'=>'name','placeholder'=>'Full Name']) !!}
                                 </div>
 
                                 <div class="form-group col-lg-6">
                                     {!! Form::label('email', 'Email ',['class' => 'require']) !!}
-                                    {!! Form::email('email', null, ['class'=>'form-control','id'=>'email','name'=>'email']) !!}
+                                    {!! Form::email('email', null, ['class'=>'form-control','id'=>'email','name'=>'email','placeholder'=>'Email']) !!}
                                 </div>
                                 <div class="form-group col-lg-6">
                                     {!! Form::label('password', 'Password ') !!}
-                                    {!! Form::password('password', ['class'=>'form-control', 'id'=>'password', 'name'=>'password']) !!}
+                                    {!! Form::password('password', ['class'=>'form-control', 'id'=>'password', 'name'=>'password','placeholder'=>'Password']) !!}
                                 </div>
                                 <div class="form-group col-lg-6">
                                     {!! Form::label('', 'Confirm Password ') !!}
-                                    {!! Form::password('', ['class'=>'form-control','id'=>'confirm_password','name'=>'confirm_password']) !!}
+                                    {!! Form::password('', ['class'=>'form-control','id'=>'confirm_password','name'=>'confirm_password','placeholder'=>'Same Password']) !!}
                                 </div>
                                 <div class="form-group col-lg-6">
                                     {!! Form::label('is_active', 'Status ', ['class' => 'require']) !!}
@@ -48,6 +48,10 @@
                                 <div class="form-group col-lg-6">
                                     {!! Form::label('role_id', 'Role ', ['class' => 'require']) !!}
                                     {!! Form::select('role_id', ['' => 'Choose Options'] + $roles , null, ['class'=>'form-control','id'=>'role']) !!}
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    {!! Form::label('fb_link', 'Facebook Profile ', ['class' => 'require']) !!}
+                                    {!! Form::text('fb_link', null, ['class'=>'form-control','id'=>'fb_link','name'=>'fb_link','placeholder'=>'https://www.facebook.com/xyz']) !!}
                                 </div>
                                 <div class="form-group col-lg-10">
                                     {!! Form::label('photo_id', 'User Photo') !!}

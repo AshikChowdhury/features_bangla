@@ -14,6 +14,9 @@
                                 <div class="overlay overlay-bg"></div>
                                 <img class="img-fluid" src="{{$post->photo ? $post->photo->file : $post->photoPlaceHolder()}}" alt="">
                             </div>
+                            @if($post->photo_source)
+                                <small><span class="fa fa-camera"></span> {{$post->photo_source}}</small>
+                            @endif
                             <div class="content-wrap">
                                 <ul class="tags mt-10">
                                     <li><a href="#">{{$post->category->name}}</a></li>
@@ -22,9 +25,9 @@
                                     <h3>{{$post->title}}</h3>
                                 </a>
                                 <ul class="meta pb-20">
-                                    <li><a href="#"><span class="lnr lnr-user"></span>{{$post->user->name}}</a></li>
+                                    <li><a href="{!!$post->user->fb_link!!}" target="_blank"><span class="lnr lnr-user"></span>{{$post->user->name}}</a></li>
                                     <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$post->created_at->format('d F, Y')}} at {{date('g:i a', strtotime($post->created_at))}}</a></li>
-                                    <li><a href="#"><span class="lnr lnr-bubble"></span>06 </a></li>
+                                    <li><a href=""><span class="disqus-comment-count" data-disqus-url="{{route('home.post',[$post->category->name,$post->slug])}}"></span></a></li>
                                 </ul>
                                 <p>{!!$post->body!!}</p>
 
@@ -43,15 +46,23 @@
                                             <div id="disqus_thread"></div>
                                             <script>
 
+                                                /**
+                                                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                                                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+                                                var disqus_config = function () {
+                                                    this.page.url = '{{route('home.post',[$post->category->name,$post->slug])}}';  // Replace PAGE_URL with your page's canonical URL variable
+                                                    this.page.identifier = '{{$post->slug}}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                                                };
+
                                                 (function() { // DON'T EDIT BELOW THIS LINE
                                                     var d = document, s = d.createElement('script');
-                                                    s.src = 'https://http-ashikchow-000webhostapp-com.disqus.com/embed.js';
+                                                    s.src = 'https://featuresbangla-com.disqus.com/embed.js';
                                                     s.setAttribute('data-timestamp', +new Date());
                                                     (d.head || d.body).appendChild(s);
                                                 })();
                                             </script>
-                                            <noscript>Please enable JavaScript to view the comments</noscript>
-                                            {{--<script id="dsq-count-scr" src="//http-ashikchow-000webhostapp-com.disqus.com/count.js" async></script>--}}
+                                            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
                                         </div>
                                     </div>
                                 </div>
@@ -69,3 +80,6 @@
     </div>
 
 @stop
+@section('scripts')
+    <script id="dsq-count-scr" src="//featuresbangla-com.disqus.com/count.js" async></script>
+@endsection

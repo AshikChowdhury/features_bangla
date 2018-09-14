@@ -53,7 +53,7 @@
                                     <h3>{{$feature->title}}</h3>
                                 </a>
                                 <ul class="meta">
-                                    <li><a href="#"><span class="lnr lnr-user"></span>{{$feature->user->name}}</a></li>
+                                    <li><a href="{!!$feature->user->fb_link!!}" target="_blank"><span class="lnr lnr-user"></span>{{$feature->user->name}}</a></li>
                                     <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$feature->created_at->format('d F, Y')}}</a></li>
                                 </ul>
                             </div>
@@ -74,7 +74,7 @@
                                         <h4>{{$subfeature1->title}}</h4>
                                     </a>
                                     <ul class="meta">
-                                        <li><a href="#"><span class="lnr lnr-user"></span>{{$subfeature1->user->name}}</a></li>
+                                        <li><a href="{!!$subfeature1->user->fb_link!!}" target="_blank"><span class="lnr lnr-user"></span>{{$subfeature1->user->name}}</a></li>
                                         <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$subfeature1->created_at->format('d F, Y')}}</a></li>
                                     </ul>
                                 </div>
@@ -94,7 +94,7 @@
                                         <h4>{{$subfeature2->title}}</h4>
                                     </a>
                                     <ul class="meta">
-                                        <li><a href="#"><span class="lnr lnr-user"></span>{{$subfeature2->user->name}}</a></li>
+                                        <li><a href="{!!$subfeature2->user->fb_link!!}" target="_blank"></span>{{$subfeature2->user->name}}</a></li>
                                         <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$subfeature2->created_at->format('d F, Y')}}</a></li>
                                         {{--<li><a href="#"><span class="lnr lnr-bubble"></span>06 Comments</a></li>--}}
                                     </ul>
@@ -137,7 +137,7 @@
                                                     <h4>{{$cate_post->title}}</h4>
                                                 </a>
                                                 <ul class="meta">
-                                                    <li><a href="#"><span class="lnr lnr-user"></span>{{$cate_post->user->name}}</a></li>
+                                                    <li><a href="{!!$cate_post->user->fb_link!!}" target="_blank"><span class="lnr lnr-user"></span>{{$cate_post->user->name}}</a></li>
                                                     <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$cate_post->created_at->format('d F, Y')}}</a></li>
                                                     {{--<li><a href="#"><span class="lnr lnr-bubble"></span>06 Comments</a></li>--}}
                                                 </ul>
@@ -174,7 +174,7 @@
                                         <h3>{{$most_visited->title}}</h3>
                                     </a>
                                     <ul class="meta">
-                                        <li><a href="#"><span class="lnr lnr-user"></span>{{$most_visited->user->name}}</a></li>
+                                        <li><a href="{!!$most_visited->user->fb_link!!}" target="_blank"><span class="lnr lnr-user"></span>{{$most_visited->user->name}}</a></li>
                                         <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$most_visited->created_at->format('d F, Y')}}</a></li>
                                     </ul>
                                 </div>
@@ -198,7 +198,7 @@
                                                     <h4>{{$most_visit->title}}</h4>
                                                 </a>
                                                 <ul class="meta">
-                                                    <li><a href="#"><span class="lnr lnr-user"></span>{{$most_visit->user->name}}</a></li>
+                                                    <li><a href="{!!$most_visit->user->fb_link!!}" target="_blank"><span class="lnr lnr-user"></span>{{$most_visit->user->name}}</a></li>
                                                     <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$most_visit->created_at->format('d F, Y')}}</a></li>
                                                 </ul>
                                                 <p class="excert">
@@ -232,7 +232,7 @@
                                                     <h4>{{$random->title}}</h4>
                                                 </a>
                                                 <ul class="meta">
-                                                    <li><a href="#"><span class="lnr lnr-user"></span>{{$random->user->name}}</a></li>
+                                                    <li><a href="{!!$random->user->fb_link!!}" target="_blank"><span class="lnr lnr-user"></span>{{$random->user->name}}</a></li>
                                                     <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$random->created_at->format('d F, Y')}}</a></li>
                                                 </ul>
                                                 <p class="excert">

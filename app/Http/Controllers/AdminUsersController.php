@@ -75,6 +75,7 @@ class AdminUsersController extends Controller
             $user->photo_id = $input['photo_id'];
         }
         $user->name = $input['name'];
+        $user->fb_link = $input['fb_link'];
         $user->email = $input['email'];
         $user->role_id = $input['role_id'];
         $user->is_active = $input['is_active'];
@@ -144,6 +145,7 @@ class AdminUsersController extends Controller
             $user->photo_id = $input['photo_id'];
         }
         $user->name = $input['name'];
+        $user->fb_link = $input['fb_link'];
         $user->email = $input['email'];
         $user->role_id = $input['role_id'];
         $user->is_active = $input['is_active'];

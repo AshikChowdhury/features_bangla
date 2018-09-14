@@ -45,8 +45,8 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-6 header-top-right no-padding">
                     <ul>
-                        <li><a href="mob:+8801521218513"><span class="lnr lnr-phone-handset"></span><span>+880 152 1218 513</span></a></li>
-                        <li><a href="#"><span class="lnr lnr-envelope"></span><span><span class="__cf_email__" >featuresbangla@gmail.com</span></span></a></li>
+                        {{--<li><a href="mob:+8801521218513"><span class="lnr lnr-phone-handset"></span><span>+880 152 1218 513</span></a></li>--}}
+                        {{--<li><a href="#"><span class="lnr lnr-envelope"></span><span><span class="__cf_email__" >featuresbangla@gmail.com</span></span></a></li>--}}
                     </ul>
                 </div>
             </div>
@@ -105,57 +105,38 @@
 
 <footer class="footer-area section-gap">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 single-footer-widget">
-                <h4>Top Products</h4>
-                <ul>
-                    <li><a href="#">Managed Website</a></li>
-                    <li><a href="#">Manage Reputation</a></li>
-                    <li><a href="#">Power Tools</a></li>
-                    <li><a href="#">Marketing Service</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-2 col-md-6 single-footer-widget">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#">Jobs</a></li>
-                    <li><a href="#">Brand Assets</a></li>
-                    <li><a href="#">Investor Relations</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-2 col-md-6 single-footer-widget">
-                <h4>Features</h4>
-                <ul>
-                    <li><a href="#">Jobs</a></li>
-                    <li><a href="#">Brand Assets</a></li>
-                    <li><a href="#">Investor Relations</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-2 col-md-6 single-footer-widget">
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="/login">Admin</a></li>
-                    <li><a href="#">Research</a></li>
-                    <li><a href="#">Experts</a></li>
-                    <li><a href="#">Agencies</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 single-footer-widget">
-                <h4>Instragram Feed</h4>
-                <ul class="instafeed d-flex flex-wrap">
-                    <li><img src="img/i1.jpg" alt=""></li>
-                    <li><img src="img/i2.jpg" alt=""></li>
-                    <li><img src="img/i3.jpg" alt=""></li>
-                    <li><img src="img/i4.jpg" alt=""></li>
-                    <li><img src="img/i5.jpg" alt=""></li>
-                    <li><img src="img/i6.jpg" alt=""></li>
-                    <li><img src="img/i7.jpg" alt=""></li>
-                    <li><img src="img/i8.jpg" alt=""></li>
-                </ul>
-            </div>
-        </div>
+        {{--<div class="row">--}}
+            {{--<div class="col-lg-3 col-md-6 single-footer-widget">--}}
+                {{--<h4>Top Products</h4>--}}
+                {{--<ul>--}}
+                    {{--<li><a href="#">Managed Website</a></li>--}}
+                {{--</ul>--}}
+            {{--</div>--}}
+            {{--<div class="col-lg-2 col-md-6 single-footer-widget">--}}
+                {{--<h4>Quick Links</h4>--}}
+                {{--<ul>--}}
+                    {{--<li><a href="#">Jobs</a></li>--}}
+                {{--</ul>--}}
+            {{--</div>--}}
+            {{--<div class="col-lg-2 col-md-6 single-footer-widget">--}}
+                {{--<h4>Features</h4>--}}
+                {{--<ul>--}}
+                    {{--<li><a href="#">Jobs</a></li>--}}
+                {{--</ul>--}}
+            {{--</div>--}}
+            {{--<div class="col-lg-2 col-md-6 single-footer-widget">--}}
+                {{--<h4>Resources</h4>--}}
+                {{--<ul>--}}
+                    {{--<li><a href="/login">Admin</a></li>--}}
+                {{--</ul>--}}
+            {{--</div>--}}
+            {{--<div class="col-lg-3 col-md-6 single-footer-widget">--}}
+                {{--<h4>Instragram Feed</h4>--}}
+                {{--<ul class="instafeed d-flex flex-wrap">--}}
+                    {{--<li><img src="img/i1.jpg" alt=""></li>--}}
+                {{--</ul>--}}
+            {{--</div>--}}
+        {{--</div>--}}
         <div class="footer-bottom row align-items-center">
             <p class="footer-text m-0 col-lg-8 col-md-12">
                 Copyright &copy; Features Bangla All rights reserved
