@@ -1,7 +1,7 @@
 const { mix } = require('laravel-mix');
 
 mix.js('resources/assets/js/app.js', 'public/js')
-    .sass('resources/assets/sass/app.scss', 'public/css');
+    .sass('resources/assets/sass/app.scss', 'public/css/app.css');
 
 mix.styles([
 
@@ -33,3 +33,20 @@ mix.scripts([
     'resources/assets/js/libs/custom.js'
 
 ],'public/js/libs.js');
+
+mix.scripts([
+    'resources/assets/js/main/vendor/jquery-2.2.4.min.js',
+    'resources/assets/js/main/jquery-ui.js',
+    'resources/assets/js/main/jquery.nice-select.min.js',
+    'resources/assets/js/main/jquery.ajaxchimp.min.js',
+    'resources/assets/js/main/jquery.magnific-popup.min.js',
+    'resources/assets/js/main/vendor/bootstrap.min.js',
+    'resources/assets/js/main/easing.min.js',
+    'resources/assets/js/main/hoverIntent.js',
+    'resources/assets/js/main/superfish.min.js',
+    'resources/assets/js/main/mn-accordion.js',
+    'resources/assets/js/main/owl.carousel.min.js',
+    'resources/assets/js/main/mail-script.js',
+    'resources/assets/js/main/main.js'
+
+],'public/js/main.js');

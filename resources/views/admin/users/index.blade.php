@@ -4,12 +4,12 @@
 @section('content')
     {{--<div id="page-wrapper">--}}
         <div class="row" style="padding-top: 20px">
-            <div class="col-lg-12">
+            <div class="col-lg-12 col-sm-12">
                 @include('includes.messages')
-                <div class="col-lg-4">
+                <div class="col-lg-4 ">
                     <strong><h3>Users</h3></strong>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-8 col-sm-12">
                     <div class="panel-heading pull-right">
                         <a href="{{route('admin.users.index')}}" class="btn-primary btn-sm"><i class="fa fa-navicon"></i> All Users</a>
                         <a href="{{route('admin.users.create')}}" class="btn-warning btn-sm"><i class="fa fa-plus"></i> Add New</a>

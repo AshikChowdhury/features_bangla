@@ -17,7 +17,7 @@
     </script>
     <!-- //Meta-Tags -->
     <!-- Stylesheets -->
-    <link href="/css/main/login_style.css" rel='stylesheet' type='text/css' />
+    <link href="/css/login_style.css" rel='stylesheet' type='text/css' />
     <!-- online fonts-->
     <link href="https://fonts.googleapis.com/css?family=Amiri:400,400i,700,700i" rel="stylesheet">
     <style>
@@ -79,8 +79,8 @@
     <!--//copyright-->
 </div>
 <!-- scripts required  for particle effect -->
-<script src='/js/main/particles.min.js'></script>
-<script src="/js/main/index.js"></script>
+<script src='/js/particles.min.js'></script>
+<script src="/js/index.js"></script>
 <!-- //scripts required for particle effect -->
 </body>
 

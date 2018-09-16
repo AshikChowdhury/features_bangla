@@ -23,6 +23,6 @@ class Admin
 
             }
         }
-        return redirect('/');
+        return redirect('/login');
     }
 }

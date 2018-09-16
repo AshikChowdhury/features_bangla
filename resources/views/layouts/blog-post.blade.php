@@ -5,7 +5,7 @@
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="img/fav.html">
+    <link rel="shortcut icon" href="">
     <!-- Author Meta -->
     <meta name="author" content="Ashik">
     <!-- Meta Description -->
@@ -20,15 +20,8 @@
     <!--
     CSS
     ============================================= -->
-    <link rel="stylesheet" href="/css/main/linearicons.css">
-    <link rel="stylesheet" href="/css/main/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/main/bootstrap.css">
-    <link rel="stylesheet" href="/css/main/magnific-popup.css">
-    <link rel="stylesheet" href="/css/main/nice-select.css">
-    <link rel="stylesheet" href="/css/main/animate.min.css">
-    <link rel="stylesheet" href="/css/main/owl.carousel.css">
-    <link rel="stylesheet" href="/css/main/jquery-ui.css">
-    <link rel="stylesheet" href="/css/main/main.css">
+    <link rel="stylesheet" href="{{ mix('css/app.css')}}" >
+
 </head>
 
 <body>
@@ -150,22 +143,8 @@
     </div>
 </footer>
 <!-- End footer Area -->
-<script src="/js/main/vendor/jquery-2.2.4.min.js"></script>
-{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/popper.min.js"></script>--}}
-<script src="/js/main/vendor/bootstrap.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-<script src="/js/main/easing.min.js"></script>
-<script src="/js/main/hoverIntent.js"></script>
-<script src="/js/main/superfish.min.js"></script>
-<script src="/js/main/jquery.ajaxchimp.min.js"></script>
-<script src="/js/main/jquery.magnific-popup.min.js"></script>
-<script src="/js/main/mn-accordion.js"></script>
-<script src="/js/main/jquery-ui.js"></script>
-<script src="/js/main/jquery.nice-select.min.js"></script>
-<script src="/js/main/owl.carousel.min.js"></script>
-<script src="/js/main/mail-script.js"></script>
-<script src="/js/main/main.js"></script>
 
+<script src="{{mix('js/main.js')}}"></script>
 
 @yield('scripts')
 
