@@ -64,15 +64,15 @@
         <div class="row align-items-center justify-content-between">
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
-                    <li class="{{Request::is('/') ? 'menu-item-active' : ''}}"><a href="/">Home</a></li>
+                    <li class="{{Request::is('/') ? 'menu-item-active' : ''}}"><a href="/"><strong>মূল পাতা</strong></a></li>
                     @foreach($categories as $category)
                         <li><a href="{{route('home.category', $category->name)}}">{{$category->name}}</a></li>
                     @endforeach
                     @if(!$more_categories->isEmpty())
-                        <li class="menu-has-children"><a href="#">More</a>
+                        <li class="menu-has-children"><a href="#"><strong>আরো দেখুন</strong></a>
                             <ul>
                                 @foreach($more_categories as $more_category)
-                                    <li><a href="{{route('home.category', $more_category->name)}}">{{$more_category->name}}</a></li>
+                                    <li><a href="{{route('home.category', $more_category->name)}}"><strong>{{$more_category->name}}</strong></a></li>
                                 @endforeach
                             </ul>
                         </li>
@@ -98,17 +98,21 @@
 
 <footer class="footer-area section-gap">
     <div class="container">
-        {{--<div class="row">--}}
-            {{--<div class="col-lg-3 col-md-6 single-footer-widget">--}}
-                {{--<h4>Top Products</h4>--}}
-                {{--<ul>--}}
-                    {{--<li><a href="#">Managed Website</a></li>--}}
-                {{--</ul>--}}
-            {{--</div>--}}
+        <div class="row">
+            <div class="col-lg-3 col-md-6 single-footer-widget">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/login">Managed Website</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
             {{--<div class="col-lg-2 col-md-6 single-footer-widget">--}}
-                {{--<h4>Quick Links</h4>--}}
+                {{--<h4>About</h4>--}}
                 {{--<ul>--}}
-                    {{--<li><a href="#">Jobs</a></li>--}}
+                    {{--<li><a href="#">About</a></li>--}}
+                    {{--<li><a href="/login">Managed Website</a></li>--}}
                 {{--</ul>--}}
             {{--</div>--}}
             {{--<div class="col-lg-2 col-md-6 single-footer-widget">--}}
@@ -120,7 +124,7 @@
             {{--<div class="col-lg-2 col-md-6 single-footer-widget">--}}
                 {{--<h4>Resources</h4>--}}
                 {{--<ul>--}}
-                    {{--<li><a href="/login">Admin</a></li>--}}
+                    {{--<li><a href="">Admin</a></li>--}}
                 {{--</ul>--}}
             {{--</div>--}}
             {{--<div class="col-lg-3 col-md-6 single-footer-widget">--}}
@@ -129,13 +133,13 @@
                     {{--<li><img src="img/i1.jpg" alt=""></li>--}}
                 {{--</ul>--}}
             {{--</div>--}}
-        {{--</div>--}}
+        </div>
         <div class="footer-bottom row align-items-center">
             <p class="footer-text m-0 col-lg-8 col-md-12">
                 Copyright &copy; Features Bangla All rights reserved
             </p>
             <div class="col-lg-4 col-md-12 footer-social">
-                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.facebook.com/featuresbangla" target="_blank"><i class="fa fa-facebook"></i></a>
                 <a href="#"><i class="fa fa-twitter"></i></a>
                 <a href="#"><i class="fa fa-instagram"></i></a>
             </div>

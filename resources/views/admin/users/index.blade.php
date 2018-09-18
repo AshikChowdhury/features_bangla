@@ -20,14 +20,14 @@
                         <table width="100%" class="table table-striped table-bordered table-hover" id="userTable">
                             <thead>
                             <tr>
-                                <th style="width: 1%">ID</th>
+                                <th class="text-center" style="width: 1%">#</th>
                                 <th>Photo</th>
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Role</th>
-                                <th>Status</th>
+                                <th class="text-center">Status</th>
                                 <th>Created</th>
-                                {{--<th>Updated</th>--}}
+
                             </tr>
                             </thead>
                             <tbody>
@@ -35,12 +35,12 @@
 
                                 @foreach($users as $user)
                                     <tr>
-                                        <td>{{$user->id}}</td>
-                                        <td><img height="35" width="40" src="{{$user->photo ? $user->photo->file : '/images/400x400.png'}}" alt=""></td>
+                                        <td class="text-center">{{$loop->iteration}}</td>
+                                        <td class="text-center"><img height="35" width="40" src="{{$user->photo ? $user->photo->file : '/images/400x400.png'}}" alt=""></td>
                                         <td><a href="{{route('admin.users.edit', $user->id)}}">{{$user->name}}</a></td>
                                         <td>{{$user->email}}</td>
                                         <td>{{ucfirst($user->role->name ? $user->role->name : 'User Has No Role')}}</td>
-                                        <td>
+                                        <td class="text-center">
                                             @if($user->is_active == 1)
                                                 <button class="btn-success btn-xs">Active</button>
                                             @else
@@ -48,7 +48,7 @@
                                             @endif
                                         </td>
                                         <td>{{$user->created_at->format('d F, Y')}}</td>
-                                        {{--<td>{{$user->updated_at->diffForHumans()}}</td>--}}
+
                                     </tr>
                                 @endforeach
                             @endif

@@ -58,7 +58,10 @@ class HomeController extends Controller
             ->distinct()
             ->get();
 
-        $categories = Category::all();
+        $categories = Category::inRandomOrder()
+            ->take(7)
+            ->distinct()
+            ->get();;
 
         $cate_posts[] = null;
         foreach ($categories as $category){

@@ -19,33 +19,30 @@
                     <table width="100%" class="table table-striped table-bordered table-hover" id="userTable">
                         <thead>
                         <tr>
-                            <th style="width: 10px">ID</th>
+                            <th style="width: 1%">#</th>
                             <th>Photo</th>
-                            <th>Owner</th>
-                            <th>Category</th>
                             <th>Title</th>
-                            {{--<th>Body</th>--}}
-                            <th>Post Link</th>
-                            {{--<th>Comments</th>--}}
-                            <th>Created</th>
-                            {{--<th>Updated</th>--}}
+                            <th>Category</th>
+                            <th>Author</th>
+                            <th>Created At</th>
+                            <th class="text-center">Action</th>
                         </tr>
                         </thead>
                         <tbody>
                         @if($posts)
                             @foreach($posts as $post)
                                 <tr>
-                                    <td>{{$loop->iteration}}</td>
-                                    <td><img height="50" width="60" src="{{$post->photo ? $post->photo->file : '/images/400x400.png'}}" alt=""></td>
-                                    <td style="width: 13%">{{$post->user->name}}</td>
+                                    <td class="text-center">{{$loop->iteration}}</td>
+                                    <td class="text-center"><img height="40" width="50" src="{{$post->photo ? $post->photo->file : '/images/400x400.png'}}" alt=""></td>
+                                    <td style="width: 25%">{{$post->title}}</td>
                                     <td>{{$post->category ? $post->category->name : "Uncategorized"}}</td>
-                                    <td style="width: 25%"><a href="{{route('admin.posts.edit', $post->id)}}">{{$post->title}}</a></td>
-                                    {{--<td>{{str_limit($post->body, 30)}}</td>--}}
-                                    <td><a href="{{route('home.post',[$post->category->name, $post->slug])}}">View Post</a></td>
-                                    {{--<td><button class="btn-success btn-xs">{{$user->is_active == 1 ? 'Active' : 'Inactive' }}</button></td>--}}
-                                    {{--<td><a href="{{route('admin.comments.show',$post->id)}}">View Comments</a></td>--}}
-                                    <td>{{$post->created_at->diffForHumans()}}</td>
-                                    {{--<td>{{$post->updated_at->diffForHumans()}}</td>--}}
+                                    <td><a href="{{$post->user->fb_link}}" target="_blank">{{$post->user->name}}</a></td>
+                                    <td>{{$post->created_at->format('d F, Y')}}</td>
+                                    <td class="text-center">
+                                        <a href="{{route('home.post',[$post->category->name, $post->slug])}}"><button class="btn btn-info btn-xs">View</button></a>
+                                        <a href="{{route('admin.posts.edit', $post->id)}}"><button class="btn btn-warning btn-xs">Edit</button></a>
+                                        <a href="{{route('admin.posts.edit', $post->id)}}"><button class="btn btn-danger btn-xs">Delete</button></a>
+                                    </td>
                                 </tr>
                             @endforeach
                         @endif

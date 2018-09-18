@@ -91,16 +91,11 @@
                     </li>
 
                     <li class="{{Request::is('admin.users') ? 'active' : ''}}">
-                        <a href="#"><i class="fa fa-users fa-fw"></i> Users<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-wrench fa-fw"></i> System Setup<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li class="{{Request::is('admin.users.index') ? 'active' : ''}}">
-                                <a href="{{route('admin.users.index')}}">All Users</a>
+                                <a href="{{route('admin.users.index')}}">Users</a>
                             </li>
-
-                            <li class="{{Request::is('admin.users.create') ? 'active' : ''}}">
-                                <a href="{{route('admin.users.create')}}">Create User</a>
-                            </li>
-
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
@@ -109,7 +104,7 @@
                         <a href="#"><i class="fa fa-newspaper-o fa-fw"></i> Posts<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="{{route('admin.posts.index')}}">All Posts</a>
+                                <a href="{{route('admin.posts.index')}}">Posts</a>
                             </li>
                             <li>
                                 <a href="{{route('admin.types.index')}}">Post Types</a>
@@ -134,72 +129,72 @@
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
-                    <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="panels-wells.html">Panels and Wells</a>
-                            </li>
-                            <li>
-                                <a href="buttons.html">Buttons</a>
-                            </li>
-                            <li>
-                                <a href="notifications.html">Notifications</a>
-                            </li>
-                            <li>
-                                <a href="typography.html">Typography</a>
-                            </li>
-                            <li>
-                                <a href="icons.html"> Icons</a>
-                            </li>
-                            <li>
-                                <a href="grid.html">Grid</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Second Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Third Level <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-third-level -->
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-                    <li class="active">
-                        <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a class="active" href="blank.html">Blank Page</a>
-                            </li>
-                            <li>
-                                <a href="login.html">Login Page</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
+                    {{--<li>--}}
+                        {{--<a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>--}}
+                        {{--<ul class="nav nav-second-level">--}}
+                            {{--<li>--}}
+                                {{--<a href="panels-wells.html">Panels and Wells</a>--}}
+                            {{--</li>--}}
+                            {{--<li>--}}
+                                {{--<a href="buttons.html">Buttons</a>--}}
+                            {{--</li>--}}
+                            {{--<li>--}}
+                                {{--<a href="notifications.html">Notifications</a>--}}
+                            {{--</li>--}}
+                            {{--<li>--}}
+                                {{--<a href="typography.html">Typography</a>--}}
+                            {{--</li>--}}
+                            {{--<li>--}}
+                                {{--<a href="icons.html"> Icons</a>--}}
+                            {{--</li>--}}
+                            {{--<li>--}}
+                                {{--<a href="grid.html">Grid</a>--}}
+                            {{--</li>--}}
+                        {{--</ul>--}}
+                        {{--<!-- /.nav-second-level -->--}}
+                    {{--</li>--}}
+                    {{--<li>--}}
+                        {{--<a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>--}}
+                        {{--<ul class="nav nav-second-level">--}}
+                            {{--<li>--}}
+                                {{--<a href="#">Second Level Item</a>--}}
+                            {{--</li>--}}
+                            {{--<li>--}}
+                                {{--<a href="#">Second Level Item</a>--}}
+                            {{--</li>--}}
+                            {{--<li>--}}
+                                {{--<a href="#">Third Level <span class="fa arrow"></span></a>--}}
+                                {{--<ul class="nav nav-third-level">--}}
+                                    {{--<li>--}}
+                                        {{--<a href="#">Third Level Item</a>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<a href="#">Third Level Item</a>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<a href="#">Third Level Item</a>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<a href="#">Third Level Item</a>--}}
+                                    {{--</li>--}}
+                                {{--</ul>--}}
+                                {{--<!-- /.nav-third-level -->--}}
+                            {{--</li>--}}
+                        {{--</ul>--}}
+                        {{--<!-- /.nav-second-level -->--}}
+                    {{--</li>--}}
+                    {{--<li class="active">--}}
+                        {{--<a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>--}}
+                        {{--<ul class="nav nav-second-level">--}}
+                            {{--<li>--}}
+                                {{--<a class="active" href="blank.html">Blank Page</a>--}}
+                            {{--</li>--}}
+                            {{--<li>--}}
+                                {{--<a href="login.html">Login Page</a>--}}
+                            {{--</li>--}}
+                        {{--</ul>--}}
+                        {{--<!-- /.nav-second-level -->--}}
+                    {{--</li>--}}
                 </ul>
             </div>
             <!-- /.sidebar-collapse -->
@@ -208,33 +203,33 @@
     </nav>
 
 
-    <div class="navbar-default sidebar" role="navigation">
-        <div class="sidebar-nav navbar-collapse">
-            <ul class="nav" id="side-menu">
-                <li>
-                    <a href="/profile"><i class="fa fa-dashboard fa-fw"></i>Profile</a>
-                </li>
+    {{--<div class="navbar-default sidebar" role="navigation">--}}
+        {{--<div class="sidebar-nav navbar-collapse">--}}
+            {{--<ul class="nav" id="side-menu">--}}
+                {{--<li>--}}
+                    {{--<a href="/profile"><i class="fa fa-dashboard fa-fw"></i>Profile</a>--}}
+                {{--</li>--}}
 
-                <li>
-                    <a href="#"><i class="fa fa-wrench fa-fw"></i> Posts<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="">All Posts</a>
-                        </li>
+                {{--<li>--}}
+                    {{--<a href="#"><i class="fa fa-wrench fa-fw"></i> Posts<span class="fa arrow"></span></a>--}}
+                    {{--<ul class="nav nav-second-level">--}}
+                        {{--<li>--}}
+                            {{--<a href="">All Posts</a>--}}
+                        {{--</li>--}}
 
-                        <li>
-                            <a href="">Create Post</a>
-                        </li>
+                        {{--<li>--}}
+                            {{--<a href="">Create Post</a>--}}
+                        {{--</li>--}}
 
-                    </ul>
-                    <!-- /.nav-second-level -->
-                </li>
+                    {{--</ul>--}}
+                    {{--<!-- /.nav-second-level -->--}}
+                {{--</li>--}}
 
-            </ul>
+            {{--</ul>--}}
 
-        </div>
+        {{--</div>--}}
 
-    </div>
+    {{--</div>--}}
 
 </div>
 
