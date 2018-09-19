@@ -49,6 +49,13 @@
                     @endif
                 </div>
             </div>
+            <div class="form-group">
+                @if (Request::has('previous'))
+                    <input type="hidden" name="previous" value="{{ Request::get('previous') }}">
+                @else
+                    <input type="hidden" name="previous" value="{{ URL::previous() }}">
+                @endif
+            </div>
 
             <div class="agile-field-txt{{ $errors->has('password') ? ' has-error' : '' }}">
                 <input type="password" name="password" placeholder="******" required="" id="password" />
