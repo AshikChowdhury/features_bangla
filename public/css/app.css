@@ -13957,7 +13957,7 @@ body {
   left: 0;
   width: 48%;
   height: 100%;
-  background: url(/images/about-img.jpg?b426a4e3a46ec422543870d6af8c4057) no-repeat center center/cover;
+  /*background: url(../../img/about/about-img.jpg) no-repeat center center/cover;*/
   z-index: 1;
 }
 
@@ -14123,7 +14123,7 @@ body {
 }
 
 .feedback-area .feedback-right {
-  background: url(/images/video-bg.jpg?2fe26700ca3a94a600ca2838b9d150b3) center;
+  /*background: url(../../img/video-bg.jpg) center;*/
   background-size: cover;
   padding: 130px 0;
 }

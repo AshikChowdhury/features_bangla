@@ -42,6 +42,7 @@
                                         <a href="{{route('home.post',[$post->category->name, $post->slug])}}"><button class="btn btn-info btn-xs">View</button></a>
                                         <a href="{{route('admin.posts.edit', $post->id)}}"><button class="btn btn-warning btn-xs">Edit</button></a>
                                         <a href="{{route('admin.posts.edit', $post->id)}}"><button class="btn btn-danger btn-xs">Delete</button></a>
+                                        {{--<button href="#myModal" class="btn-xs btn-danger" data-toggle="modal">Delete</button>--}}
                                     </td>
                                 </tr>
                             @endforeach
@@ -58,5 +59,30 @@
         </div>
     </div>
 
+    <!-- Modal HTML -->
+    {{--<div id="myModal" class="modal fade">--}}
+        {{--<div class="modal-dialog modal-confirm">--}}
+            {{--<div class="modal-content">--}}
+                {{--<div class="modal-header">--}}
+                    {{--<div class="icon-box">--}}
+                        {{--<i class="fa fa-times-circle"></i>--}}
+                    {{--</div>--}}
+                    {{--<h4 class="modal-title">Are you sure?</h4>--}}
+                    {{--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>--}}
+                {{--</div>--}}
+                {{--<div class="modal-body">--}}
+                    {{--<p>Do you really want to delete these records? This process cannot be undone.</p>--}}
+                {{--</div>--}}
+                {{--<div class="modal-footer">--}}
+                    {{--<button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>--}}
+                    {{--<button style="border: none; background: none">--}}
+                        {{--{!! Form::open(['method'=>'DELETE', 'action'=>['AdminPostsController@destroy', $post->id]]) !!}--}}
+                        {{--{!! Form::submit('Delete', ['class'=>'btn btn-danger']) !!}--}}
+                        {{--{!! Form::close() !!}--}}
+                    {{--</button>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
 
 @stop

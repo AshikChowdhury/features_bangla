@@ -37,8 +37,8 @@
                     </div>
 
                     <div class="form-group col-md-4 col-sm-10">
-                        {!! Form::label('post_type', 'Post Type ',['class' => 'require']) !!}
-                        {!! Form::select('post_type', ['' => 'Select Type'] + $types, null, ['class'=>'form-control', 'id' => 'type','required']) !!}
+                        {!! Form::label('post_type', 'Post Type ') !!}
+                        {!! Form::select('post_type', ['' => 'Select Type'] + $types, null, ['class'=>'form-control', 'id' => 'type']) !!}
                     </div>
 
                     <div class="form-group col-md-4 col-sm-10">
@@ -53,7 +53,7 @@
 
                     <div class="form-group col-md-12 col-sm-12">
                         {!! Form::label('body', 'Body ',['class' => 'require']) !!}
-                        {!! Form::textarea('body', null, ['class'=>'form-control','required']) !!}
+                        {!! Form::textarea('body', null, ['class'=>'form-control']) !!}
                     </div>
 
                     <div class="form-group col-md-2 col-sm-6">
@@ -66,7 +66,7 @@
     </div>
 @stop
 @section('script')
-    @include('includes.tinyeditor')
+
     <script>
         $(document).ready(function() {
             $('#author').select2();
@@ -74,4 +74,5 @@
             $('#type').select2();
         });
     </script>
+    @include('includes.tinyeditor')
 @endsection

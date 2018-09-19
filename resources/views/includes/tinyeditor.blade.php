@@ -30,6 +30,7 @@
                 resizable : "yes",
                 close_previous : "no"
             });
+
         }
     };
 

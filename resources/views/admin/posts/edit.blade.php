@@ -60,7 +60,7 @@
 
                     <div class="form-group col-md-12 col-sm-12">
                         {!! Form::label('body', 'Body ',['class' => 'require']) !!}
-                        {!! Form::textarea('body', null, ['class'=>'form-control','required']) !!}
+                        {!! Form::textarea('body', null, ['class'=>'form-control']) !!}
                     </div>
 
                     <div class="form-group col-md-4 col-sm-10">
