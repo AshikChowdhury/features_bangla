@@ -81,6 +81,7 @@ class HomeController extends Controller
         $post = Post::where('slug',$slug)
             ->with(['user','category','photo'])
             ->first();
+
         $blogKey = 'blog_'. $post->id;
         if (!Session::has($blogKey)){
             $post->increment('visit_count');

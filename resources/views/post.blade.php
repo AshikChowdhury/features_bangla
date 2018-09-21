@@ -3,9 +3,23 @@
 @section('content')
 
     <div class="site-main-container">
+        <meta property="og:url"           content="{{url()->current()}}" />
+        <meta property="og:type"          content="{{$post->category->name}}" />
+        <meta property="og:title"         content="{{$post->title}}" />
+        <meta property="og:description"   content="{{$post->body}}" />
+        <meta property="og:image"         content="http://www.featuresbangla.com/{{$post->photo->file}}" />
 
         <!-- Start latest-post Area -->
         <section class="latest-post-area pb-120">
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+            </script>
             <div class="container no-padding">
                 <div class="row">
                     <div class="col-lg-8 post-list">
@@ -31,6 +45,16 @@
                                     <li><a href=""><span class="disqus-comment-count" data-disqus-url="{{route('home.post',[$post->category->name,$post->slug])}}"></span></a></li>
                                 </ul>
                                 <p>{!!$post->body!!}</p>
+
+                                {{--//fb share button--}}
+                                <div class="fb-share-button" data-size="large"
+                                     data-href="{{url()->current()}}"
+                                     data-layout="button_count">
+                                </div>
+
+                                {{--<div class="fb-share-button" data-href="{{url()->current()}}" data-layout="button_count" data-size="large" data-mobile-iframe="true">--}}
+                                    {{--<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=.'{{url()->current()}}'.&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>--}}
+                                {{--</div>--}}
 
                                 <div class="navigation-wrap justify-content-between d-flex">
                                     @if (isset($previous))

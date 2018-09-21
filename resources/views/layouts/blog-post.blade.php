@@ -8,6 +8,11 @@
     <link rel="shortcut icon" href="">
     <!-- Author Meta -->
     <meta name="author" content="Ashik">
+
+    <!-- You can use Open Graph tags to customize link previews.
+    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+
+
     <!-- Meta Description -->
     <meta name="description" content="">
     <!-- Meta Keyword -->
