@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Admin</title>
-    <link rel="stylesheet" href="{{ mix('css/libs.css')}}" >
+    <link rel="stylesheet" href="{{ asset('css/libs.css')}}" >
 
     @yield('style')
 
@@ -250,7 +250,7 @@
 <!-- /#page-wrapper -->
 
 <!-- /#wrapper -->
-<script src="{{mix('js/libs.js')}}"></script>
+<script src="{{asset('js/libs.js')}}"></script>
 
 @yield('script')
 

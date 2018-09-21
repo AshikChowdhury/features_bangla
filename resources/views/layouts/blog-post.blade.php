@@ -20,7 +20,7 @@
     <!--
     CSS
     ============================================= -->
-    <link rel="stylesheet" href="{{ mix('css/app.css')}}" >
+    <link rel="stylesheet" href="{{ asset('css/app.css')}}" >
 
 </head>
 
@@ -148,7 +148,7 @@
 </footer>
 <!-- End footer Area -->
 
-<script src="{{mix('js/main.js')}}"></script>
+<script src="{{asset('js/main.js')}}"></script>
 
 @yield('scripts')
 
