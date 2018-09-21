@@ -11,7 +11,11 @@
 
     <!-- You can use Open Graph tags to customize link previews.
     Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
-
+        <meta property="og:url"           content="{{url()->current()}}" />
+        <meta property="og:type"          content="{{$post->category->name}}" />
+        <meta property="og:title"         content="{{$post->title}}" />
+        <meta property="og:description"   content="{!!$post->body!!}" />
+        <meta property="og:image"         content="http://www.featuresbangla.com{{$post->photo->file}}" />
 
     <!-- Meta Description -->
     <meta name="description" content="">

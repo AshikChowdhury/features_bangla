@@ -1,13 +1,12 @@
 @extends('layouts.blog-post')
 
 @section('content')
-
+    <meta property="og:url"           content="{{url()->current()}}" />
+    <meta property="og:type"          content="{{$post->category->name}}" />
+    <meta property="og:title"         content="{{$post->title}}" />
+    <meta property="og:description"   content="{!!$post->body!!}" />
+    <meta property="og:image"         content="http://www.featuresbangla.com{{$post->photo->file}}" />
     <div class="site-main-container">
-        <meta property="og:url"           content="{{url()->current()}}" />
-        <meta property="og:type"          content="{{$post->category->name}}" />
-        <meta property="og:title"         content="{{$post->title}}" />
-        <meta property="og:description"   content="{{$post->body}}" />
-        <meta property="og:image"         content="http://www.featuresbangla.com/{{$post->photo->file}}" />
 
         <!-- Start latest-post Area -->
         <section class="latest-post-area pb-120">
