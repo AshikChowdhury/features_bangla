@@ -1,13 +1,16 @@
 @extends('layouts.blog-post')
 
+@section('fb-meta')
+    {{--<meta property="article:author" content="{{$post->user->fb_link}}">--}}
+    <meta property="og:url" content="{{route('home.post',[$post->category->name, $post->slug])}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{$post->title}}" />
+    <meta property="og:description" content="{!! str_limit(strip_tags($post->body), 180, ' <strong>.....</strong>') !!}" />
+    <meta property="og:image" content="http://www.featuresbangla.com{{$post->photo->file}}" />
+@endsection
 @section('content')
-    <meta property="og:url"           content="{{url()->current()}}" />
-    <meta property="og:type"          content="{{$post->category->name}}" />
-    <meta property="og:title"         content="{{$post->title}}" />
-    <meta property="og:description"   content="{!!$post->body!!}" />
-    <meta property="og:image"         content="http://www.featuresbangla.com{{$post->photo->file}}" />
-    <div class="site-main-container">
 
+    <div class="site-main-container">
         <!-- Start latest-post Area -->
         <section class="latest-post-area pb-120">
             <div id="fb-root"></div>

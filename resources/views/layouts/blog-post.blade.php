@@ -7,15 +7,11 @@
     <!-- Favicon-->
     <link rel="shortcut icon" href="">
     <!-- Author Meta -->
-    <meta name="author" content="Ashik">
 
-    <!-- You can use Open Graph tags to customize link previews.
-    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
-        <meta property="og:url"           content="{{url()->current()}}" />
-        <meta property="og:type"          content="{{$post->category->name}}" />
-        <meta property="og:title"         content="{{$post->title}}" />
-        <meta property="og:description"   content="{!!$post->body!!}" />
-        <meta property="og:image"         content="http://www.featuresbangla.com{{$post->photo->file}}" />
+    <meta property="fb:pages" content="2183874765213942" />
+    <meta property="fb:app_id" content="543661519408683" />
+    {{--<meta property="article:publisher" content="https://www.facebook.com/featuresbangla">--}}
+    @yield('fb-meta')
 
     <!-- Meta Description -->
     <meta name="description" content="">
@@ -25,15 +21,16 @@
     <meta charset="UTF-8">
     <!-- Site Title -->
     <title>Features Bangla</title>
+
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-    <!--
-    CSS
-    ============================================= -->
+
+    <!-- CSS ============================================= -->
     <link rel="stylesheet" href="{{ asset('css/app.css')}}" >
 
 </head>
 
 <body>
+
 <header>
 
     <div class="header-top">
@@ -41,7 +38,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-6 header-top-left no-padding">
                     <ul>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.facebook.com/featuresbangla" target="_blank"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                     </ul>
                 </div>
@@ -75,7 +72,7 @@
                 <ul class="nav-menu">
                     <li class="{{Request::is('/') ? 'menu-item-active' : ''}}"><a href="/"><strong>মূল পাতা</strong></a></li>
                     @foreach($categories as $category)
-                        <li><a href="{{route('home.category', $category->name)}}">{{$category->name}}</a></li>
+                        <li class="{{Request::is('post/') ? 'menu-item-active' : ''}}"><a href="{{route('home.category', $category->name)}}">{{$category->name}}</a></li>
                     @endforeach
                     @if(!$more_categories->isEmpty())
                         <li class="menu-has-children"><a href="#"><strong>আরো দেখুন</strong></a>

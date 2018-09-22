@@ -16,7 +16,7 @@
                     <div class="col-lg-12">
                         <div class="hero-nav-area">
                             <h1 class="text-white">{{$category}}</h1>
-                            <p class="text-white link-nav"><a href="/">Home </a>  <span class="lnr lnr-arrow-right"></span><a href="{{route('home.category', $category)}}">{{$category}}</a></p>
+                            <p class="text-white link-nav"><a href="/">মূল পাতা </a>  <span class="lnr lnr-arrow-right"></span><a href="{{route('home.category', $category)}}">{{$category}}</a></p>
                         </div>
                     </div>
                 </div>

@@ -1027,6 +1027,7 @@ header {
   margin: 0;
 }
 
+
 /* Nav Meu Styling */
 .nav-menu a {
   padding: 0 8px 0px 8px;
@@ -3301,4 +3302,36 @@ div.thumbnail_container .overlay-bg {
 
 .footer-area .footer-bottom .footer-social a:hover {
   background: #f6214b;
+}
+
+.menu-item-active{
+  background-color: #f6214b;
+  padding: 2px;
+}
+
+span.menu-title {
+  display: none;
+}
+
+/*landing page custom css*/
+.editor-img{
+  height: 180px;
+}
+.thumb-img{
+  height: 80px;
+  width: 120px;
+}
+@media screen and (max-width: 1366px) and (min-width: 993px) {
+  .editor-img{
+    height: 150px;
+  }
+  .thumb-img{
+    height: 80px;
+    width: 120px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .editor-img{
+    height: auto;
+  }
 }

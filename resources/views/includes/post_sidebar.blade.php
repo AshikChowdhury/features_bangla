@@ -1,26 +1,4 @@
-<style>
-    .editor-img{
-        height: 180px;
-    }
-    .thumb-img{
-        height: 80px;
-        width: 120px;
-    }
-    @media screen and (max-width: 1366px) and (min-width: 993px) {
-        .editor-img{
-            height: 150px;
-        }
-        .thumb-img{
-            height: 80px;
-            width: 120px;
-        }
-    }
-    @media screen and (max-width: 992px) {
-        .editor-img{
-            height: auto;
-        }
-    }
-</style>
+
 <div class="sidebars-area">
     <div class="single-sidebar-widget editors-pick-widget">
         <h6 class="title">Editor’s Pick</h6>
@@ -102,9 +80,14 @@
             <li class="d-flex justify-content-between align-items-center fb">
                 <div class="icons d-flex flex-row align-items-center">
                     <i class="fa fa-facebook" aria-hidden="true"></i>
-                    <p>983 Likes</p>
+                    <p></p>
+                    <div class="fb-like" data-href="https://www.facebook.com/featuresbangla/"
+                         data-layout="button_count"
+                         data-action="like" data-size="large"
+                         data-show-faces="true"
+                         data-share="true">
+                    </div>
                 </div>
-                <a href="#">Like our page</a>
             </li>
             <li class="d-flex justify-content-between align-items-center tw">
                 <div class="icons d-flex flex-row align-items-center">
