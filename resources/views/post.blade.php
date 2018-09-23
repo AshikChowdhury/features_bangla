@@ -40,14 +40,11 @@
                                 <p>{!!$post->body!!}</p>
 
                                 {{--//fb share button--}}
+                                <i class="fa fa-share-alt fa-2x" aria-hidden="true" style="padding-right: 10px; color: #f6214b"></i>
                                 <div class="fb-share-button" data-size="large"
                                      data-href="{{url()->current()}}"
                                      data-layout="button_count">
                                 </div>
-
-                                {{--<div class="fb-share-button" data-href="{{url()->current()}}" data-layout="button_count" data-size="large" data-mobile-iframe="true">--}}
-                                    {{--<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=.'{{url()->current()}}'.&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>--}}
-                                {{--</div>--}}
 
                                 <div class="navigation-wrap justify-content-between d-flex">
                                     @if (isset($previous))
