@@ -80,7 +80,7 @@
                 <ul class="nav-menu">
                     <li class="{{Request::is('/') ? 'menu-item-active' : ''}}"><a href="/"><strong>মূল পাতা</strong></a></li>
                     @foreach($categories as $category)
-                        <li class="{{Request::is('post/') ? 'menu-item-active' : ''}}"><a href="{{route('home.category', $category->name)}}">{{$category->name}}</a></li>
+                        <li class="{{ request()->getRequestUri() == ('/post/'.urlencode($category->name)) ? 'menu-item-active' : '' }}"><a href="{{route('home.category', $category->name)}}"><strong>{{$category->name}}</strong></a></li>
                     @endforeach
                     @if(!$more_categories->isEmpty())
                         <li class="menu-has-children"><a href="#"><strong>আরো দেখুন</strong></a>
