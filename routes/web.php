@@ -96,12 +96,19 @@ Route::group(['middleware'=>'auth'],function (){
 
 //**** View Composer ****//
 View::composer(['layouts.blog-post','includes.post_sidebar'], function ($view){
-    $categories = Category::where('serial', '<=', 7)
-        ->where('status',1)
+    $categories = Category::where('status',1)
+        ->take(7)
+        ->orderBy('serial')
         ->get();
-    $more_categories = Category::where('serial', '>', 7)
-        ->where('status',1)
+
+    $total_cats = Category::count();
+    $skip = count($categories);
+    $more_categories = Category::where('status',1)
+        ->skip($skip)
+        ->take($total_cats-$skip)
+        ->orderBy('serial')
         ->get();
+
     $editor = Post::where('post_type', 4)
         ->with(['photo', 'category', 'user'])
         ->orderBy('id', 'desc')->first();
