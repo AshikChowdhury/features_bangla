@@ -48,7 +48,7 @@
 
     {{--//***** Add Place *****//--}}
     <div class="single-sidebar-widget ads-widget">
-        <img class="img-fluid" src="img/sidebar-ads.jpg" alt="">
+        {{--<img class="img-fluid" src="img/sidebar-ads.jpg" alt="">--}}
     </div>
 
     <div class="single-sidebar-widget most-popular-widget">
@@ -108,6 +108,6 @@
 
     {{--//***** Add Place *****//--}}
     <div class="single-sidebar-widget ads-widget">
-        <img class="img-fluid" src="img/sidebar-ads.jpg" alt="">
+        {{--<img class="img-fluid" src="img/sidebar-ads.jpg" alt="">--}}
     </div>
 </div>

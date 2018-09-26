@@ -22,6 +22,15 @@
     <!-- Site Title -->
     <title>Features Bangla</title>
 
+    //Google Ads
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-7089086620921283",
+            enable_page_level_ads: true
+        });
+    </script>
+
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 
     <!-- CSS ============================================= -->
@@ -69,7 +78,7 @@
                 </div>
                 {{--<div class="col-lg-8 col-md-8 col-sm-12 logo-right no-padding ads-banner">--}}
                 <div class="col-lg-8 col-md-8 col-sm-12 logo-right no-padding ads-banner">
-                    <img class="img-fluid" src="/img/banner-ad.jpg" alt="">
+                    {{--<img class="img-fluid" src="/img/banner-ad.jpg" alt="">--}}
                 </div>
             </div>
         </div>
