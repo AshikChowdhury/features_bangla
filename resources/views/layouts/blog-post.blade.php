@@ -22,7 +22,7 @@
     <!-- Site Title -->
     <title>Features Bangla</title>
 
-    //Google Ads
+    {{--//Google Ads--}}
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({
