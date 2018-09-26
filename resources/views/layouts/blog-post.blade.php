@@ -139,10 +139,12 @@
             {{--</div>--}}
             <div class="col-lg-3 col-md-6 single-footer-widget">
                 <a href="https://www.accuweather.com/en/bd/dhaka/28143/weather-forecast/28143" class="aw-widget-legal">
-                    <!--
-                    By accessing and/or using this code snippet, you agree to AccuWeather’s terms and conditions (in English) which can be found at https://www.accuweather.com/en/free-weather-widgets/terms and AccuWeather’s Privacy Statement (in English) which can be found at https://www.accuweather.com/en/privacy.
-                    -->
-                </a><div id="awcc1537718096760" class="aw-widget-current"  data-locationkey="28143" data-unit="c" data-language="en-us" data-useip="false" data-uid="awcc1537718096760"></div><script type="text/javascript" src="https://oap.accuweather.com/launch.js"></script>
+                </a><div id="awcc1537718096760" class="aw-widget-current"
+                         data-locationkey="28143"
+                         data-unit="c" data-language="en-us"
+                         data-useip="false" data-uid="awcc1537718096760">
+                </div>
+                <script type="text/javascript" src="https://oap.accuweather.com/launch.js"></script>
             </div>
         </div>
         <div class="footer-bottom row align-items-center">
