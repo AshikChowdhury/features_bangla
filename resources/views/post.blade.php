@@ -5,10 +5,16 @@
     <meta property="og:url" content="{{route('home.post',[$post->category->name, $post->slug])}}" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{{$post->title}}" />
-    <meta property="og:description" content="{!! str_limit(strip_tags($post->body), 180, ' <strong>.....</strong>') !!}" />
+    <meta property="og:description" content="{!! str_limit(strip_tags($post->body), 250, ' <strong>.....</strong>') !!}" />
     <meta property="og:image" content="http://www.featuresbangla.com{{$post->photo->file}}" />
 @endsection
 @section('content')
+    <style>
+        p{
+            font-size: 16px;
+            line-height: 1.8;
+        }
+    </style>
 
     <div class="site-main-container">
         <!-- Start latest-post Area -->
@@ -37,7 +43,7 @@
                                     <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{$post->created_at->format('d F, Y')}} at {{date('g:i a', strtotime($post->created_at))}}</a></li>
                                     <li><a href=""><span class="disqus-comment-count" data-disqus-url="{{route('home.post',[$post->category->name,$post->slug])}}"></span></a></li>
                                 </ul>
-                                <p>{!!$post->body!!}</p>
+                                <p class="body">{!!$post->body!!}</p>
 
                                 {{--//fb share button--}}
                                 <i class="fa fa-share-alt fa-2x" aria-hidden="true" style="padding-right: 10px; color: #f6214b"></i>
