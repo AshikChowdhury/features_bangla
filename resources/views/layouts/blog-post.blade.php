@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon-->
     <link rel="shortcut icon" href="/images/favicon.png">
-    <!-- Author Meta -->
+    <!-- menifest Meta -->
+    <link rel="manifest" href="/manifest.json" />
+    <script async  src="https://cdn.rawgit.com/GoogleChrome/pwacompat/v2.0.1/pwacompat.min.js"></script>
+    <meta name="theme-color" content="#f6214b" />
 
     <meta property="fb:pages" content="2183874765213942" />
     <meta property="fb:app_id" content="543661519408683" />

@@ -1,0 +1,14 @@
+{
+  "name": "featuresbangla.com",
+  "short_name": "features_bangla",
+  "description": "A Web Portal",
+  "start_url": "/?utm_source=a2hs",
+  "display": "standalone",
+  "background_color": "#f6214b",
+  "theme_color": "#0f4a73",
+  "icons": [{
+    "src": "images/mani_icon.png",
+    "sizes": "256x256",
+    "type": "image/png"
+  }]
+}
