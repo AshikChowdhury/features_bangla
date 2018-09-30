@@ -7,7 +7,8 @@
  */
 function bangla_slug($string, $separator = '-') {
     $string = mb_strtolower($string, 'UTF-8');
-    return preg_replace('/\s+/u', $separator, trim($string));
+    $n_string = rtrim($string, '?');
+    return preg_replace('/\s+/u', $separator, trim($n_string));
 }
 
 function my_slug($string, $separator = '-')

@@ -119,7 +119,7 @@ class AdminPostsController extends Controller
     public function update(Request $request, $id)
     {
         $input = $request->all();
-        $input['slug'] = bangla_slug($request->title,'-').'-'.time();
+//        $input['slug'] = bangla_slug($request->title,'-').'-'.time();
         $input['updated_by'] = Auth::user()->id;
 
         if ($file = $request->file('photo_id')){
