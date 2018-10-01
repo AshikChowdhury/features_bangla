@@ -22,6 +22,7 @@ function my_slug($string, $separator = '-')
     $string = preg_replace("/[^a-z0-9_\s-]/u", '', $string);
 
     // Remove multiple dashes or whitespaces or underscores
+    // preg_replace('/[?\s+]/u', $separator, trim($string));
     preg_replace("/[^a-z0-9_\s-ءاآؤئبپتثجچحخدذرزژسشصضطظعغفقكکگلمنوهی]/u", '', $string);
 
     // Convert whitespaces and underscore to the given separator
