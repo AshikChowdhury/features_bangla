@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html lang="bn">
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<html lang="en">
 <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="features, featuresbangla, news, bangla, articles, magazine, banglafeatures, feature, news_portal">
+    <meta name="description" content="Features Bangla is a new media platform that offers coverage and analysis of current affairs, business, lifestyle, technology, arts, and culture in Bangladesh as well as the all over the world" />
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon-->
