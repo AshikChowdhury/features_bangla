@@ -2,11 +2,13 @@
 
 @section('fb-meta')
     {{--<meta property="article:author" content="{{$post->user->fb_link}}">--}}
+    @if($post)
     <meta property="og:url" content="{{route('home.post',[$post->category->name, $post->slug])}}" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{{$post->title}}" />
     <meta property="og:description" content="{!! str_limit(strip_tags($post->body), 250, ' <strong>.....</strong>') !!}" />
     <meta property="og:image" content="http://www.featuresbangla.com{{$post->photo->file}}" />
+    @endif
 @endsection
 @section('content')
     <style>
@@ -23,6 +25,7 @@
                 <div class="row">
                     <div class="col-lg-8 post-list">
                         <!-- Start single-post Area -->
+                        @if($post)
                         <div class="single-post-wrap">
                             <div class="feature-img-thumb relative">
                                 <div class="overlay overlay-bg"></div>
@@ -90,6 +93,7 @@
                             </div>
                         </div>
                         <!-- End single-post Area -->
+                        @endif
                     </div>
                     <div class="col-lg-4">
                         @include('includes.post_sidebar')

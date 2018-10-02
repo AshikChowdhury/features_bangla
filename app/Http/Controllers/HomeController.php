@@ -81,14 +81,15 @@ class HomeController extends Controller
         $post = Post::where('slug',$slug)
             ->with(['user','category','photo'])
             ->first();
+        if (is_null($post)){
+            return abort(404);
+        }else{
+            $blogKey = 'blog_'. $post->id;
+            if (!Session::has($blogKey)){
+                $post->increment('visit_count');
+                Session::put($blogKey,1);
+            }
 
-        $blogKey = 'blog_'. $post->id;
-        if (!Session::has($blogKey)){
-            $post->increment('visit_count');
-            Session::put($blogKey,1);
-        }
-
-        if ($post){
             $next = Post::where('id', '>', $post->id)->orderBy('id')->first();
             $previous = Post::where('id', '<', $post->id)->orderBy('id')->first();
         }
