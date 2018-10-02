@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Admin</title>
+    <link rel="shortcut icon" href="/images/favicon.png">
+    <title>Admin- Features Bangla</title>
     <link rel="stylesheet" href="{{ asset('css/libs.css')}}">
 
     @yield('style')
@@ -28,7 +29,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Home</a>
+            <a class="navbar-brand" href="/">
+                <img width="70px" src="/images/new_logo.png" alt="Features Bangla">
+            </a>
         </div>
         <!-- /.navbar-header -->
 

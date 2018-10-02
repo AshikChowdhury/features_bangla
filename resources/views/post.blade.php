@@ -57,10 +57,10 @@
 
                                 <div class="navigation-wrap justify-content-between d-flex">
                                     @if (isset($previous))
-                                    <a class="prev" href="{{route('home.post',[$previous->category->name,$previous->slug])}}"><span class="lnr lnr-arrow-left"></span>Prev Post</a>
+                                    <a class="prev" href="{{route('home.post',[$previous->category->name,$previous->slug])}}"><span class="lnr lnr-arrow-left"></span>Prev Story</a>
                                     @endif
                                     @if (isset($next))
-                                    <a class="next" href="{{route('home.post',[$next->category->name,$next->slug])}}">Next Post<span class="lnr lnr-arrow-right"></span></a>
+                                    <a class="next" href="{{route('home.post',[$next->category->name,$next->slug])}}">Next Story<span class="lnr lnr-arrow-right"></span></a>
                                     @endif
                                 </div>
                                 <hr>

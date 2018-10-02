@@ -89,20 +89,6 @@
                     </div>
                 </div>
             </li>
-            <li class="d-flex justify-content-between align-items-center tw">
-                <div class="icons d-flex flex-row align-items-center">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                    <p>983 Followers</p>
-                </div>
-                <a href="#">Follow Us</a>
-            </li>
-            <li class="d-flex justify-content-between align-items-center yt">
-                <div class="icons d-flex flex-row align-items-center">
-                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                    <p>983 Subscriber</p>
-                </div>
-                <a href="#">Subscribe</a>
-            </li>
         </ul>
     </div>
 

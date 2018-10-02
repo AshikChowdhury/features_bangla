@@ -118,7 +118,7 @@
                     <div class="col-lg-8 post-list">
                         <!-- Start latest-post Area -->
                         <div class="latest-post-wrap">
-                            <h4 class="cat-title">Latest News</h4>
+                            <h4 class="cat-title">Latest Stories</h4>
                             @if($cate_posts)
                                 @foreach($cate_posts as $cate_post)
                                     @if($cate_post)
@@ -159,7 +159,7 @@
                         <!-- End banner-ads Area -->
                         <!-- Start popular-post Area -->
                         <div class="popular-post-wrap">
-                            <h4 class="title">Popular Posts</h4>
+                            <h4 class="title">Popular Stories</h4>
                             @if($most_visited)
                             <div class="feature-post relative">
                                 <div class="feature-img relative">
@@ -213,7 +213,7 @@
                         <!-- End popular-post Area -->
                         <!-- Start relavent-story-post Area -->
                         <div class="relavent-story-post-wrap mt-30">
-                            <h4 class="title">Relavent Stories</h4>
+                            <h4 class="title">Relevant Stories</h4>
                             <div class="relavent-story-list-wrap">
                                 @if(!$randoms->isEmpty())
                                     @foreach($randoms as $random)
