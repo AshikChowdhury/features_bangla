@@ -28,9 +28,7 @@ Route::get('/post/{category}', ['as'=>'home.category', 'uses'=>'HomeController@C
 
 Route::group(['middleware'=>'admin'],function (){
 
-    Route::get('/admin', function(){
-        return view('admin.index');
-    });
+    Route::get('/admin', 'AdminDashboardController@index');
 
     Route::resource('admin/users', 'AdminUsersController',['names'=>[
 
