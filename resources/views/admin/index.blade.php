@@ -19,7 +19,7 @@
                         </div>
                         <div class="col-xs-9 text-right">
                             <div class="huge">{{ $users }}</div>
-                            <div>Users!</div>
+                            <div>Active Users!</div>
                         </div>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                         </div>
                         <div class="col-xs-9 text-right">
                             <div class="huge">{{ $posts }}</div>
-                            <div>Posts!</div>
+                            <div>Active Posts!</div>
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
                         </div>
                         <div class="col-xs-9 text-right">
                             <div class="huge">{{ $categories }}</div>
-                            <div>Categories!</div>
+                            <div>Active Categories!</div>
                         </div>
                     </div>
                 </div>
